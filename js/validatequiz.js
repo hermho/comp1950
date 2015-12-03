@@ -106,7 +106,7 @@ $(function() {
             }
             else {
                 /*submits the quiz*/
-                alert("You have now submitted quiz!");
+                alert("You have now submitted the quiz!");
                 $("#submitquiz").hide();
                 
                 hideQuizSection();
