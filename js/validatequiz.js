@@ -90,7 +90,7 @@ $(function() {
         else if (studentnumber.trim() == "") {
             alert("Please specify your student number");
         }
-        else if (!studentnumber.match(/A00[0-9]{6}/)) {
+        else if (!studentnumber.match(/A00[0-9]{6}/) || studentnumber.length > 9) {
             alert("Please provide a valid student number. The student number must start with A00 followed by 6-digits.");
         }
         else {
