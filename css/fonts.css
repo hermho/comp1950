@@ -1,0 +1,52 @@
+/*
+-------------------------------------
+COMP 1950 PROJECT
+
+Author: Herman Ho (#A00954161)
+Last Updated: 2015-Dec-03
+-------------------------------------
+*/
+
+/*
++++++++++++++++++++++
+Fonts - Century Gothic & Folkster
++++++++++++++++++++++
+*/
+
+/*
+Headings, Links:
+Century Gothic Bold
+
+Body font, Paragraphs:
+Century Gothic Regular
+
+Heading Emphasis:
+Folkster
+*/
+
+@font-face {
+    font-family: centuryGothic;
+    src: url(/comp1950/fonts/century_gothic_regular.TTF);
+	font-weight: normal;
+}
+@font-face {
+    font-family: centuryGothic;
+    src: url(/comp1950/fonts/century_gothic_regular_italic.TTF);
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+    font-family: centuryGothic;
+    src: url(/comp1950/fonts/century_gothic_bold.TTF);
+	font-weight: bold;
+}
+@font-face {
+    font-family: centuryGothic;
+    src: url(/comp1950/fonts/century_gothic_bold_italic.TTF);
+	font-weight: bold;
+	font-style: italic;
+}
+@font-face {
+    font-family: folkster;
+    src: url(/comp1950/fonts/folkster.otf);
+}

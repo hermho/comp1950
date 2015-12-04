@@ -1,0 +1,178 @@
+
+/*
+-------------------------------------
+COMP 1950 PROJECT
+
+Author: Herman Ho (#A00954161)
+Last Updated: 2015-Dec-02
+-------------------------------------
+*/
+
+/*
+-------------------------------------
+Colour Reference
+
+BCIT Blue: #003366
+50th Teal: #00b388
+50th Lime: #c4d600
+-------------------------------------
+*/
+
+/*
++++++++++++++++++++++
+Wrapper
++++++++++++++++++++++
+*/
+body{
+	margin-top: -16px;
+}
+#outerwrapper {
+    position:relative;
+    padding: 0;
+	margin: 0;
+	height: 100vh;
+	width: 100vw;
+	
+    background: -webkit-linear-gradient(120deg, #003366, #00b388);
+    background: -o-linear-gradient(120deg, #003366, #00b388);
+    background: -moz-linear-gradient(120deg, #003366, #00b388);
+    background: linear-gradient(120deg, #003366, #00b388);
+}
+
+/*
++++++++++++++++++++++
+Main Content
++++++++++++++++++++++
+*/
+
+main {
+	font-family: centuryGothic;
+	color: #fff;
+	margin: 0 15%;
+}
+h1 {
+	text-transform: uppercase;
+	font-weight: normal;
+	border-left: 2px solid #fff;
+	padding-left: 50px;
+	position: absolute;
+	left: 50%;
+	top: 165px;
+	line-height: 100%;
+}
+h1 span {
+	font-family: folkster;
+	text-transform: lowercase;
+	font-size: 1.8em;
+}
+p {
+    text-align: center;
+	padding-top: 350px;
+}
+#logo {
+	position: absolute;
+	right: 50%;
+	padding-right: 50px;
+	width: 350px;
+	top: 160px;
+}
+
+/*
++++++++++++++++++++++
+Navigation
++++++++++++++++++++++
+*/
+
+nav {
+	position: absolute;
+	right: 32.5%;
+	left: 32%;
+	top: 470px;
+}
+nav a {
+	display: inline-block;
+	padding-left: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+nav a #home {
+	height: 55px;
+	width: 55px;
+	border-radius: 30px;
+	border: 2px solid #fff;
+	background: url("/comp1950/images/nav_icons_blue.png") 0px 0px;
+}
+nav a:hover #home {
+	height: 55px;
+	width: 55px;
+	border-radius: 30px;
+	border: 2px solid #fff;
+	background: url("/comp1950/images/nav_icons_teal.png") 0px 0px;
+}
+nav a #team {
+	height: 55px;
+	width: 55px;
+	border-radius: 30px;
+	border: 2px solid #fff;
+	background: url("/comp1950/images/nav_icons_blue.png") -55px 0px;
+}
+nav a:hover #team {
+	height: 55px;
+	width: 55px;
+	border-radius: 30px;
+	border: 2px solid #fff;
+	background: url("/comp1950/images/nav_icons_teal.png") -55px 0px;
+}
+nav a #sitemap {
+	height: 55px;
+	width: 55px;
+	border-radius: 30px;
+	border: 2px solid #fff;
+	background: url("/comp1950/images/nav_icons_blue.png") -110px 0px;
+}
+nav a:hover #sitemap {
+	height: 55px;
+	width: 55px;
+	border-radius: 30px;
+	border: 2px solid #fff;
+	background: url("/comp1950/images/nav_icons_teal.png") -110px 0px;
+}
+nav a #design {
+	height: 55px;
+	width: 55px;
+	border-radius: 30px;
+	border: 2px solid #fff;
+	background: url("/comp1950/images/nav_icons_blue.png") -165px 0px;
+}
+nav a:hover #design {
+	height: 55px;
+	width: 55px;
+	border-radius: 30px;
+	border: 2px solid #fff;
+	background: url("/comp1950/images/nav_icons_teal.png") -165px 0px;
+}
+nav a #preview {
+	height: 55px;
+	width: 55px;
+	border-radius: 30px;
+	border: 2px solid #fff;
+	background: url("/comp1950/images/nav_icons_blue.png") -220px 0px;
+}
+nav a:hover #preview {
+	height: 55px;
+	width: 55px;
+	border-radius: 30px;
+	border: 2px solid #fff;
+	background: url("/comp1950/images/nav_icons_teal.png") -220px 0px;
+}
+
+/*
++++++++++++++++++++++
+Metasite - Team
++++++++++++++++++++++
+*/
+
+#leftPanel {
+	position: absolute;
+	left: 0;
+}
