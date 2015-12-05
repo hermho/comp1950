@@ -100,79 +100,74 @@ nav a #home {
 	width: 55px;
 	border-radius: 30px;
 	border: 2px solid #fff;
-	background: url("/comp1950/images/nav_icons_blue.png") 0px 0px;
+	background: url("/comp1950/images/nav_icons.png") 0px 0px;
 }
 nav a:hover #home {
 	height: 55px;
 	width: 55px;
 	border-radius: 30px;
 	border: 2px solid #fff;
-	background: url("/comp1950/images/nav_icons_teal.png") 0px 0px;
+	background: url("/comp1950/images/nav_icons.png") 0px 0px;
+	box-shadow: 3px 3px 8px #404041;	
 }
 nav a #team {
 	height: 55px;
 	width: 55px;
 	border-radius: 30px;
 	border: 2px solid #fff;
-	background: url("/comp1950/images/nav_icons_blue.png") -55px 0px;
+	background: url("/comp1950/images/nav_icons.png") -55px 0px;
 }
 nav a:hover #team {
 	height: 55px;
 	width: 55px;
 	border-radius: 30px;
 	border: 2px solid #fff;
-	background: url("/comp1950/images/nav_icons_teal.png") -55px 0px;
+	background: url("/comp1950/images/nav_icons.png") -55px 0px;
+	box-shadow: 3px 3px 8px #404041;	
 }
 nav a #sitemap {
 	height: 55px;
 	width: 55px;
 	border-radius: 30px;
 	border: 2px solid #fff;
-	background: url("/comp1950/images/nav_icons_blue.png") -110px 0px;
+	background: url("/comp1950/images/nav_icons.png") -110px 0px;
 }
 nav a:hover #sitemap {
 	height: 55px;
 	width: 55px;
 	border-radius: 30px;
 	border: 2px solid #fff;
-	background: url("/comp1950/images/nav_icons_teal.png") -110px 0px;
+	background: url("/comp1950/images/nav_icons.png") -110px 0px;
+	box-shadow: 3px 3px 8px #404041;	
 }
 nav a #design {
 	height: 55px;
 	width: 55px;
 	border-radius: 30px;
 	border: 2px solid #fff;
-	background: url("/comp1950/images/nav_icons_blue.png") -165px 0px;
+	background: url("/comp1950/images/nav_icons.png") -165px 0px;
 }
 nav a:hover #design {
 	height: 55px;
 	width: 55px;
 	border-radius: 30px;
 	border: 2px solid #fff;
-	background: url("/comp1950/images/nav_icons_teal.png") -165px 0px;
+	background: url("/comp1950/images/nav_icons.png") -165px 0px;
+	box-shadow: 3px 3px 8px #404041;	
 }
 nav a #preview {
 	height: 55px;
 	width: 55px;
 	border-radius: 30px;
 	border: 2px solid #fff;
-	background: url("/comp1950/images/nav_icons_blue.png") -220px 0px;
+	background: url("/comp1950/images/nav_icons.png") -220px 0px;
+	
 }
 nav a:hover #preview {
 	height: 55px;
 	width: 55px;
 	border-radius: 30px;
 	border: 2px solid #fff;
-	background: url("/comp1950/images/nav_icons_teal.png") -220px 0px;
-}
-
-/*
-+++++++++++++++++++++
-Metasite - Team
-+++++++++++++++++++++
-*/
-
-#leftPanel {
-	position: absolute;
-	left: 0;
+	background: url("/comp1950/images/nav_icons.png") -220px 0px;
+	box-shadow: 3px 3px 8px #404041;	
 }
