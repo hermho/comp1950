@@ -298,83 +298,84 @@ Metasite - Design
 Metasite - Preview
 +++++++++++++++++++++
 */
-
-#compPreview img{
-	width: 65%;
+.compPreview {
+	width: 70%;
 	float: left;
+	overflow: hidden;
+}
+.compPreview img{
+	width: 100%;
 }
 .iconContents {
-	width: 35%;
+	width: 30%;
 	float: left;
-	padding-top: 20px;
+	padding-top: 45px;
 }
-#iconBlue {
-	width: 125px;
-	height: 125px;
-	border-radius: 70px;
+.iconBlue {
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
 	background-color: #003366;
 	position: relative;
 	color: #003366;
 }
-#iconBlue img {
+.iconBlue img {
+	width: 40px;
+	height: 40px;
 	position: absolute;
-	top: 39px;
-	left: 35px;
+	top: 32px;
+	left: 30px;
 }
-#iconBlue h2 {
-	padding-left: 150px;
-	padding-top: 32px;
+.iconBlue h2, .iconTeal h2, .iconLime h2{
+	padding-left: 120px;
+	padding-top: 20px;
 	text-transform: uppercase;
 }
-#iconBlue span {
+.iconBlue span {
 	font-family: folkster;
 	text-transform: lowercase;
 	font-size: 1.5em;
 	line-height: 50%
 }
-#iconTeal {
-	width: 125px;
-	height: 125px;
-	border-radius: 70px;
+.iconTeal {
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
 	background-color: #00b388;
 	position: relative;
 	color: #00b388;
 }
-#iconTeal img {
+.iconTeal img {
+	width: 46px;
+	height: 46px;
 	position: absolute;
-	top: 35px;
-	left: 33px;
+	top: 30px;
+	left: 27px;
 }
-#iconTeal h2 {
-	padding-left: 150px;
-	padding-top: 32px;
-	text-transform: uppercase;
-}
-#iconTeal span {
+
+.iconTeal span {
 	font-family: folkster;
 	text-transform: lowercase;
 	font-size: 1.5em;
 	line-height: 50%
 }
-#iconLime {
-	width: 125px;
-	height: 125px;
-	border-radius: 70px;
+.iconLime {
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
 	background-color: #c4d600;
 	position: relative;
 	color: #c4d600;
 }
-#iconLime img {
+.iconLime img {
+	width: 40px;
+	height: 40px;
 	position: absolute;
-	top: 38px;
-	left: 35px;
+	top: 32px;
+	left: 30px;
 }
-#iconLime h2 {
-	padding-left: 150px;
-	padding-top: 32px;
-	text-transform: uppercase;
-}
-#iconLime span {
+
+.iconLime span {
 	font-family: folkster;
 	text-transform: lowercase;
 	font-size: 1.5em;

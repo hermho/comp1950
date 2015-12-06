@@ -4,10 +4,24 @@
 COMP 1950 PROJECT
 
 Author: Joanna Flores (#A00733856)
-Last Updated: 2015-Nov-30
+Last Updated: 2015-Dec-05
+Modified: Herman Ho (#A00954161)
 -------------------------------------
 */
 
+/*
+-------------------------------------
+Colour Reference
+
+BCIT Blue: #003366
+50th Teal: #00b388
+50th Lime: #c4d600
+-------------------------------------
+*/
+
+body {
+	font-family: centuryGothic;
+}
 /*
 +++++++++++++++++++++
 Header
@@ -21,7 +35,6 @@ header {
     height: 60px;
     z-index: 100;
     
-    background: #000;
     color: #fff;
 }
 
@@ -30,6 +43,7 @@ header {
     height: 50px;
     
     padding: 5px 2%;
+	display: none;
 }
 
 /*top navigation*/
@@ -68,12 +82,12 @@ Side Navigation
 /*the following creates the hamburger menu icon*/
 #trigger {
 	display: block;
-    width: 35px;
+    width: 25px;
 	height: 50px;
 	
 	background-color: transparent;
     float: left;
-    padding: 25px 2%;
+    padding: 25px 15px;
     z-index: 100;
 }
 
@@ -82,7 +96,7 @@ Side Navigation
 #trigger span:after {
 	cursor: pointer;
 	height: 5px;
-	width: 35px;
+	width: 30px;
     
     -moz-border-radius: 1px;
     -webkit-border: 1px;
@@ -119,6 +133,7 @@ Wrapper
     padding: 0;
 	margin: 0;
     z-index: 50;
+	overflow: hidden;
 }
 
 /*
@@ -128,17 +143,85 @@ Main Content
 */
 
 main {
-    padding: 60px 5% 2% 5%;
-    text-align: justify;
+    padding: 0 0 5% 0;
+    text-align: center;
 }
-
 .splashpage, main h1, main h2, .navbox {
     text-align: center;
 }
-
 .splashpage {
     /*height is 400px*/
-    padding: 200px 0;
+	height:100vh;
+	background-image:url("/comp1950/images/comp1950_background.jpg");
+    background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center center;	
+	overflow: hidden;
+	position: relative;
+}
+.splashpage section {
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	color: #fff;
+	line-height: 25%;
+	z-index: 50;
+	text-shadow: 5px 5px 10px #000;
+}
+.splashpage h1 {
+	text-transform: lowercase;
+	font-size: 1em;
+	letter-spacing: 1.1px;
+}
+.splashpage h2 {
+	text-transform: uppercase;
+	font-size: 3em;
+	text-shadow: 5px 5px 15px #000;
+}
+.splashpage span {
+	font-family: folkster;
+	text-transform: lowercase;
+	font-size: 1.25em;
+}
+.splashpage p {
+	text-transform: lowercase;
+	font-weight: bold;
+	line-height: 120%;
+	letter-spacing: 1.1px;
+}
+#colourOverlay {
+	height: 100vh;
+	width: 100vw;
+	
+	background: -webkit-linear-gradient(155deg, #003366, #00b388, #c4d600);
+    background: -o-linear-gradient(155deg, #003366, #00b388, #c4d600);
+    background: -moz-linear-gradient(155deg, #003366, #00b388, #c4d600);
+    background: linear-gradient(155deg, #003366, #00b388, #c4d600);
+	
+	overflow: hidden;
+	opacity: 0.5;
+	position: relative;
+}
+
+/*
++++++++++++++++++++++
+Course Contents
++++++++++++++++++++++
+*/
+
+#coursecontents {
+	padding-top: 5%;
+}
+#coursecontents h2 {
+	color: #003366;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 2.5em;
+}	
+
+#coursecontents p {
+	padding: 0 15%;
 }
 
 /*navigation boxes found in the main page and resources*/
@@ -146,18 +229,28 @@ main {
     display: block;
     padding: 2% 0;
     
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
+	color: #fff;
+	font-weight: bold;
 }
 
 .button-group button {
     display: inline-block;
     margin: 0 1%;
     width: 16%;
+	background-color: #00b388;
+	padding: .5% 0;
+	border:none;
+	border-radius: 25px;
+}
+.button-group .button.is-checked {
+	background-color: #003366;
 }
 
+
 .grid {
-    width: 100%;
+    width: 85%;
     margin: 0 auto;
     text-align: center;
 }
@@ -167,10 +260,29 @@ main {
     display: block;
     width: 200px;
     
-    border: 1px solid black;
     margin: 5px;
-    padding: 3% 0;
+    padding: 6% 0;
+	
 }
+.lectures {
+	background-color: #003366;
+}
+.exercises {
+	background-color: #00b388;
+}
+.homeworks {
+	background-color: #c4d600;
+}
+.project {
+	background-color: #c4d600;
+}
+.element-item a{
+	color: #fff;
+	text-decoration: none;
+}
+
+
+
 
 /*for quizzes*/
 .quiz > p {

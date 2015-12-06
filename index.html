@@ -8,7 +8,9 @@ Authors:
 - Prepared the page skeleton
 
 (2) Herman Ho
-<Place a brief description of what you implemented here>
+- Added the styling
+
+Last Updated: 2015-Dec-05
 --------------------------------
 -->
 
@@ -37,6 +39,9 @@ Authors:
     <!-- css file needed for implementing the default style of the side navigation -->
     <link href="/comp1950/css/jquery.mmenu.css" type="text/css" rel="stylesheet" />
     
+    <!-- for fonts  -->
+    <link type="text/css" href="/comp1950/css/fonts.css" rel="stylesheet" />
+
     <!-- for positioning  -->
     <link type="text/css" href="/comp1950/css/positioning.css" rel="stylesheet" />
     
@@ -75,19 +80,21 @@ Authors:
         <main>
             <section class="splashpage">
                 <!-- splash page -->
-                <h1>British Columbia Institute of Technology</h1>
-
                 <section>
-                    <h2>Welcome to COMP 1950</h2>
+                <h1>British Columbia Institute of Technology</h1>
+                    <h2><span>Welcome to </span>COMP 1950</h2>
                     <p>Follows on from COMP 1850 in more depth and introduces new topics and techniques for developing effective web sites</p>
                 </section>
+				<div id="colourOverlay"></div>
             </section>
             
             <section>
                 <!-- course contents -->
-                <h2 id="coursecontents">Course Contents</h2>
-                <p>Donec eget posuere purus, nec aliquet mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin dictum aliquet hendrerit. Aliquam a tempor dolor. Mauris vel scelerisque tortor, non ultrices sem. Nam vulputate, sem ac gravida molestie, tellus diam semper libero, ac molestie neque leo nec eros. Vivamus dignissim pulvinar sem vitae pharetra. Quisque nec ex facilisis, eleifend purus ut, malesuada nulla. Fusce euismod tristique metus nec varius. In hac habitasse platea dictumst. Cras finibus sodales libero, eu porttitor nunc accumsan hendrerit. Sed euismod felis nisl, molestie rhoncus eros tincidunt sit amet. Aenean non odio a diam egestas viverra nec id velit. Sed eleifend, lacus sit amet gravida dictum, arcu erat venenatis nisl, vitae congue felis libero ut lectus.</p>
-                
+				<div id="coursecontents">
+					<h2>Course Contents</h2>
+					<p>Donec eget posuere purus, nec aliquet mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin dictum aliquet hendrerit. Aliquam a tempor dolor. Mauris vel scelerisque tortor, non ultrices sem. Nam vulputate, sem ac gravida molestie, tellus diam semper libero, ac molestie neque leo nec eros. Vivamus dignissim pulvinar sem vitae pharetra.</p>
+                </div>
+				
                 <div class="button-group filters-button-group">
                     <button class="button is-checked" data-filter="*">all</button>
                     <button class="button" data-filter=".lectures">lectures</button>
