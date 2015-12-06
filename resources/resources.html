@@ -1,0 +1,158 @@
+<!--
+--------------------------------
+COMP 1950 PROJECT
+
+Authors:
+
+(1) Joanna Flores (#A00733856)
+- Prepared the page skeleton
+
+(2) Herman Ho
+- Added the styling
+
+Last Updated: 2015-Dec-05
+--------------------------------
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+    --------------------------------
+    Page title and description
+    --------------------------------
+    -->
+	<title>COMP 1950 - Home</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+	<meta charset="utf-8" />
+    <meta name="description" content="page description here" />
+    
+    <!--
+    --------------------------------
+    CSS files
+    --------------------------------
+    -->
+    
+    <!-- style reset -->
+    <link type="text/css" href="/comp1950/css/normalize.css" rel="stylesheet" />
+    
+    <!-- css file needed for implementing the default style of the side navigation -->
+    <link href="/comp1950/css/jquery.mmenu.css" type="text/css" rel="stylesheet" />
+    
+    <!-- for fonts  -->
+    <link type="text/css" href="/comp1950/css/fonts.css" rel="stylesheet" />
+
+    <!-- for positioning  -->
+    <link type="text/css" href="/comp1950/css/positioning.css" rel="stylesheet" />
+    
+    <!--
+    --------------------------------
+    Javascipt files
+    --------------------------------
+    -->
+    <!-- for implementing jQuery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+    <!-- script files needed for implementing a side navigation -->
+    <script type="text/javascript" src="/comp1950/js/jquery.mmenu.min.js"></script>
+    
+    <!-- for the navboxes in the main page and resources -->
+    <script type="text/javascript" src="/comp1950/js/isotope.pkgd.js"></script>
+    
+    <!-- for positioning -->
+    <script type="text/javascript" src="/comp1950/js/positioning.js"></script>
+    
+    <!-- HTML5 Shiv for IE earlier than version 9 -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+    <!--#include virtual="/comp1950/includes/headernav.html" -->
+    
+    <div id="outerwrapper">
+        
+        <!--
+        --------------------------------
+        Main Page Content
+        --------------------------------
+        -->
+        <main>
+            <section class="splashpage">
+                <!-- splash page -->
+                <section>
+                <h1>comp 1950 | intermediate web design & development</h1>
+                    <h2><span>Resources for </span>COMP 1950</h2>
+                    <p>Follows on from COMP 1850 in more depth and introduces new topics and techniques for developing effective web sites</p>
+                </section>
+				<div id="colourOverlay"></div>
+            </section>
+            
+            <section>
+                <!-- course contents -->
+				<div id="coursecontents">
+					<h2>Course Resources</h2>
+					<p>Donec eget posuere purus, nec aliquet mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin dictum aliquet hendrerit. Aliquam a tempor dolor. Mauris vel scelerisque tortor, non ultrices sem. Nam vulputate, sem ac gravida molestie, tellus diam semper libero, ac molestie neque leo nec eros. Vivamus dignissim pulvinar sem vitae pharetra.</p>
+                </div>
+				
+                <div class="button-group filters-button-group">
+                    <button class="button is-checked" data-filter="*">all</button>
+                    <button class="button" data-filter=".texts">texts</button>
+                    <button class="button" data-filter=".browsers">browsers</button>
+                    <button class="button" data-filter=".ftps">ftps</button>
+                    <button class="button" data-filter=".tools">tools</button>
+                </div>
+                
+                <ul class="grid">
+                    <li class="element-item browsers browser4" data-category="browsers">
+                        <a href="#"><strong><br />Chrome<br /><br /></strong></a>
+                    </li>
+                    <li class="element-item texts book1" data-category="texts">
+                        <a href="#"><strong>HTML5<br />for<br />Web Designers</strong></a>
+                    </li>
+                    <li class="element-item browsers browser1" data-category="browsers">
+                        <a href="#"><strong><br />Firefox<br /><br /></strong></a>
+                    </li>
+                    <li class="element-item ftps link1" data-category="ftps">
+                        <a href="#"><strong>Filezilla<br />Client<br />Download</strong></a>
+                    </li>
+                    <li class="element-item tools tool1" data-category="tools">
+                        <a href="#"><strong>Notepad&plus;&plus;<br />Text<br />Editor</strong></a>
+                    </li>
+                    <li class="element-item texts book2" data-category="texts">
+                        <a href="#"><strong>CSS3<br />for<br />Web Designers</strong></a>
+                    </li>
+                    <li class="element-item browsers browser2" data-category="browsers">
+                        <a href="#"><strong><br />Safari<br /><br /></strong></a>
+                    </li>
+                    <li class="element-item ftps link2" data-category="ftps">
+                        <a href="#"><strong>Core<br />FTP<br />Lite</strong></a>
+                    </li>
+                    <li class="element-item tools tool2" data-category="tools">
+                        <a href="#"><strong>Chrome<br />Dev<br />Tool</strong></a>
+                    </li>
+                    <li class="element-item texts book3" data-category="texts">
+                        <a href="#"><strong>Web Development<br />&amp; Design<br />Foundations</strong></a>
+                    </li>
+                    <li class="element-item browsers browser3" data-category="browsers">
+                        <a href="#"><strong><br />Opera<br /><br /></strong></a>
+                    </li>
+                    <li class="element-item tools tool3" data-category="tools">
+                        <a href="#"><strong>Firebug<br />Web<br />Development</strong></a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <!--
+        --------------------------------
+        Footer
+        --------------------------------
+        -->
+        <footer>
+        </footer>
+        
+    </div>    
+    
+</body>
+</html>

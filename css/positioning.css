@@ -158,7 +158,7 @@ main {
 	overflow: hidden;
 	position: relative;
 }
-.splashpage section {
+.splashpage section, .splashpage2 section {
 	position: absolute;
 	top: 50%;
     left: 50%;
@@ -167,25 +167,25 @@ main {
 	z-index: 50;
 	text-shadow: 5px 5px 10px #000;
 }
-.splashpage h1 {
+.splashpage h1, .splashpage2 h1 {
 	text-transform: lowercase;
 	font-size: 1em;
 	letter-spacing: 1.1px;
 }
-.splashpage h2 {
+.splashpage h2, .splashpage2 h2 {
 	text-transform: uppercase;
 	font-size: 3em;
 	text-shadow: 5px 5px 15px #000;
 	padding: 0;
 	margin: 0;
 }
-.splashpage span {
+.splashpage span, .splashpage2 span {
 	font-family: folkster;
 	text-transform: lowercase;
 	font-size: 1.25em;
 	font-weight: normal;
 }
-.splashpage p {
+.splashpage p, .splashpage2 p {
 	text-transform: lowercase;
 	font-weight: bold;
 	letter-spacing: 1.1px;
@@ -264,6 +264,9 @@ Course Contents
     padding: 6% 0;
 	
 }
+.element-item:hover {
+	opacity: 0.8;
+}
 .lectures {
 	background-color: #003366;
 }
@@ -280,6 +283,82 @@ Course Contents
 	color: #fff;
 	text-decoration: none;
 }
+
+.texts {
+	background-color: #003366;
+    background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+.book1:hover {
+	text-shadow: 2px 2px 4px #000;
+	background-image:url("/comp1950/images/texts1.jpg");
+}
+.book2:hover {
+	text-shadow: 2px 2px 4px #000;
+	background-image:url("/comp1950/images/texts2.jpg");
+}
+.book3:hover {
+	text-shadow: 2px 2px 4px #000;
+	background-image:url("/comp1950/images/texts3.jpg");
+}
+.browsers {
+	background-color: #00b388;
+    background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+.browser1:hover {
+	text-shadow: 2px 2px 4px #000;
+	background-image:url("/comp1950/images/browser1.jpg");
+}
+.browser2:hover {
+	text-shadow: 2px 2px 4px #000;
+	background-image:url("/comp1950/images/browser2.jpg");
+}
+.browser3:hover {
+	text-shadow: 2px 2px 4px #000;
+	background-image:url("/comp1950/images/browser3.jpg");
+}
+.browser4:hover {
+	text-shadow: 2px 2px 4px #000;
+	background-image:url("/comp1950/images/tools2.jpg");
+}
+.ftps {
+	background-color: #c4d600;
+    background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+.link1:hover {
+	text-shadow: 2px 2px 4px #000;
+	background-image:url("/comp1950/images/ftp1.jpg");
+}
+.link2:hover {
+	text-shadow: 2px 2px 4px #000;
+	background-image:url("/comp1950/images/ftp2.jpg");
+}
+.tools {
+	background-color: #414141;
+    background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+.tool1:hover {
+	text-shadow: 2px 2px 4px #000;
+	background-image:url("/comp1950/images/tools1.jpg");
+}
+.tool2:hover {
+	text-shadow: 2px 2px 4px #000;
+	background-image:url("/comp1950/images/tools2.jpg");
+}
+.tool3:hover {
+	text-shadow: 2px 2px 4px #000;
+	background-image:url("/comp1950/images/tools3.jpg");
+}
+
+
+
 
 /*
 +++++++++++++++++++++
