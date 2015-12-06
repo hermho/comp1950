@@ -37,8 +37,14 @@ Authors:
     <!-- css file needed for implementing the default style of the side navigation -->
     <link href="/comp1950/css/jquery.mmenu.css" type="text/css" rel="stylesheet" />
     
+    <!-- for fonts  -->
+    <link type="text/css" href="/comp1950/css/fonts.css" rel="stylesheet" />
+	
     <!-- for positioning  -->
-    <link type="text/css" href="/comp1950/css/positioning.css" rel="stylesheet" />
+    <link type="text/css" href="/comp1950/css/positioning.css" rel="stylesheet" title="Black On White"/>
+	
+    <!-- for alternative colours  -->
+    <link type="text/css" href="/comp1950/css/positioning_invertcolors.css" rel="alternate stylesheet" title="White On Black"/>
     
     <!--
     --------------------------------
@@ -73,24 +79,33 @@ Authors:
         Main Page Content
         --------------------------------
         -->
-        <main class="lecture page">
-            <h1>Lecture Six: CSS3</h1>
+        <main class="lecturepage">
             
-            <!-- Section #0 - Class Agenda -->
-            <section class="lecture agenda">
-                <h2>Agenda</h2>
-                <ul>	
-                    <li>Quiz #5</li>
-                    <li>CSS3</li>
-                    <li>Compatibility</li>
-                    <li>Box model</li>
-                    <li>Transitions</li>
-                    <li>Backgrounds</li>
-                </ul>
-            </section>
-            
+            <section class="splashpage">
+                <!-- splash page -->
+                <section>
+                <h1>comp 1950 | intermediate web design & development</h1>
+                    <h2><span>Week 6 Lecture - </span>CSS3</h2>
+                    <p>CSS3 provides greater control over the 'experience layer' of a user's interaction with a web page.</p>
+                </section>
+				
+				<section class="lectureagenda">
+            	<!-- Section #0 - Class Agenda -->
+					<h2>Lecture Agenda</h2>
+					<ul>	
+						<li><a href="#">Quiz #5</a></li>
+						<li><a href="#">CSS3</a></li>
+						<li><a href="#">Compatibility</a></li>
+						<li><a href="#">Box model</a></li>
+						<li><a href="#">Transitions</a></li>
+						<li><a href="#">Backgrounds</a></li>
+					</ul>
+				</section>				
+				<div id="colourOverlay"></div>
+            </section>			
+						
             <!-- Section #1 - Introducing CSS3 -->
-            <section class="lecture section">
+            <section class="lecturesection">
                 <h2>Introducing CSS3</h2>
                 <p>CSS3 promises to provide much greater control over the 'experience layer' of a user's interaction with a web page, and also to address some of the problematic layout issues of CSS2.</p>
                 <p>Technically, the current <a href="http://www.w3.org/">W3C</a> recommendation for web developers and browser vendors is <a href="http://www.w3.org/TR/CSS/">CSS2</a>. However, if close attention is payed to browser support, many CSS3 features can be effectively deployed today.</p>
@@ -109,7 +124,7 @@ Authors:
             </section>
             
             <!-- Section #2 - Compatibility: When to Apply CSS3 -->
-            <section class="lecture section">
+            <section class="lecturesection">
                 <h2>Compatibility: When to Apply CSS3</h2>
                 <p>Some aspects of the user's visual experience should be considered <strong>critical</strong> and others <strong>non-critical</strong>. Since several CSS3 techniques are not well supported at present, only use CSS3 on things <strong>non-critical</strong>.</p>
                 
@@ -134,13 +149,13 @@ Authors:
 
                 <section>
                     <h3>Follow Design Priciples</h3>
-                    <p>Keep in mind: it is important not to get too carried away with the over-use of any particular technique. When a new, fancy feature is introduced, especially features that add 'visual flair', the tendency for some developers can be to use it everywhere. Judicious and subtle application can often be more effective than going overboard. For example, dont apply the text-shadow to all text on a page. Apply it to add contrast and draw attention to special points of interest. <strong>Remember the design principles</strong>!</p>
+                    <p>Keep in mind: it is important not to get too carried away with the over-use of any particular technique. When a new, fancy feature is introduced, especially features that add 'visual flair', the tendency for some developers can be to use it everywhere. Judicious and subtle application can often be more effective than going overboard. For example, dont apply the text-shadow to all text on a page. Apply it to add contrast and draw attention to special points of interest. <strong>Remember the design principles!</strong></p>
                 </section>
 
             </section>
             
             <!-- Section #3 - Compatibility: Vendor Prefixes --> 
-            <section class="lecture section">
+            <section class="lecturesection">
                 <h2>Compatibility: vendor prefixes</h2>
                 <p>Several CSS3 features are ready to go in most modern browsers, and can be used immediately.</p>
                 <p>Other features may not enjoy complete support yet, though browser vendors will sometimes implement experimental support for a CSS3 feature. To ensure a CSS3 technique is correctly deployed, vendor prefixes may need to be added to some property names.</p>
@@ -159,15 +174,14 @@ Authors:
                         -moz-transition:10px;
                         -webkit-transition:10px;
                         transition:10px;
-                        }
-                        </code>
+                        }</code>
                     </pre>
                     <p>When deploying several vendor prefixes, use the non prefixed version of the property last, for forward-compatibility (when it is no longer an 'experimental' property, the prefixes will be dropped).</p>
                 </section>
             </section>
             
             <!-- Section #4 - Enhanced Box Models -->
-            <section class="lecture section">
+            <section class="lecturesection">
                 <h2>Enhanced Box Models</h2>
                 <p>Several new properties are being introduced for styling box models.</p>
                 <ul>
@@ -300,7 +314,7 @@ Authors:
             </section>
             
             <!-- Section #5 - New Color Model -->
-            <section class="lecture section">
+            <section class="lecturesection">
                 <h2>New Color Model</h2>
                 <p>CSS3 provides another way to define the color of an element, this time allowing you to simultaneously assign the opacity as well as a RGB color value. For example: </p>
                 <pre>
@@ -319,7 +333,7 @@ Authors:
             </section>
             
             <!-- Section #6 - Transitions -->
-            <section class="lecture section">
+            <section class="lecturesection">
                 <h2>Transitions</h2>
                 <p>Transitions allow changes to CSS properties to occur smoothly over a specified period, providing an animated effect. While not supported by all browsers, typical usage degrades gracefully. If the transition is a critical part of the user experience, javascript should be used instead of CSS3.</p>
                 <ul>
@@ -419,7 +433,7 @@ Authors:
             </section>
             
             <!-- Section #7 - Animations and Keyframes -->
-            <section class="lecture section">
+            <section class="lecturesection">
                 <h2>Animations and Keyframes</h2>
                 <p>CSS <code><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_animations">animations</a></code> allow for more sophisticated transitions. The developer first defines various stages of the transition, then a CSS rule is defined that will 'trigger' the animation.</p>
                 <fieldset>
@@ -469,7 +483,7 @@ Authors:
             </section>
             
             <!-- Section #8 - Backgrounds -->
-            <section class="lecture section">
+            <section class="lecturesection">
                 <h2>Backgrounds</h2>
                 
                 <section>
@@ -508,7 +522,7 @@ Authors:
             </section>
             
             <!-- Section #9 - Features In Development -->
-            <section class="lecture section">
+            <section class="lecturesection">
                 <h2>Features In Development</h2>
                 <p><a href="http://www.w3.org/TR/2001/WD-css3-roadmap-20010523/">W3C CSS3 Working Draft</a></p>
                 
@@ -537,7 +551,7 @@ Authors:
             </section>
             
             <!-- Section #10 - Summary -->
-            <section class="lecture summary">
+            <section class="lecturesummary">
                 <h2>Summary</h2>
                 <ul>
                     <li>Precede your CSS properties with any/all available vendor prefixed versions</li>

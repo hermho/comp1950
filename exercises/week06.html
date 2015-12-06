@@ -37,8 +37,14 @@ Authors:
     <!-- css file needed for implementing the default style of the side navigation -->
     <link href="/comp1950/css/jquery.mmenu.css" type="text/css" rel="stylesheet" />
     
+    <!-- for fonts  -->
+    <link type="text/css" href="/comp1950/css/fonts.css" rel="stylesheet" />
+	
     <!-- for positioning  -->
-    <link type="text/css" href="/comp1950/css/positioning.css" rel="stylesheet" />
+    <link type="text/css" href="/comp1950/css/positioning.css" rel="stylesheet" title="Black On White"/>
+	
+    <!-- for alternative colours  -->
+    <link type="text/css" href="/comp1950/css/positioning_invertcolors.css" rel="alternate stylesheet" title="White On Black"/>
     
     <!--
     --------------------------------
@@ -72,11 +78,20 @@ Authors:
         Main Page Content
         --------------------------------
         -->
-        <main class="exercises page">
-            <h1>Exercises Six: CSS3</h1>
-            
+        <main class="exercisespage">
+		
+            <section class="splashpage">
+                <!-- splash page -->
+                <section>
+                <h1>comp 1950 | intermediate web design & development</h1>
+                    <h2><span>Week 6 Exercise - </span>CSS3</h2>
+                    <p>CSS3 provides greater control over the 'experience layer' of a user's interaction with a web page.</p>
+                </section>
+				<div id="colourOverlay"></div>
+            </section>			
+		            
             <!-- Exercise #1 - CSS3 Box Model -->
-            <section>
+            <section class="exercisessubpage">
                 <h2>Exercise 01: CSS3 Box Model</h2>
                 <ul>
                     <li>Experiment with the new box model properties using your preferred web browser diagnostic tool (such as Firefox's Firebug)</li>
@@ -90,7 +105,7 @@ Authors:
             </section>
             
             <!-- Exercise #2 -- CSS3 Transitions Exercise -->
-            <section>
+            <section class="exercisessubpage">
                 <h2>Exercise 2: CSS3 Transitions Exercise</h2>
                 <p><a href="http://bcitcomp.ca/comp1950/downloads/transitions_exercise.zip">Download the transitions exercise starting files.</a></p>
 
@@ -137,7 +152,7 @@ Authors:
             </section>
             
             <!-- Exercise #3 - Animations and Keyframes -->
-            <section>
+            <section class="exercisessubpage">
                 <h2>Exercise 03: Animations and Keyframes</h2>
                 <ul>
                     <li>Download and examine these <a href="http://bcitcomp.ca/comp1950/downloads/animation_keyframes_exercise.zip">example animations</a></li>
@@ -148,7 +163,7 @@ Authors:
             </section>
             
             <!-- Exercise #4 - Multiple Backgrounds -->
-            <section>
+            <section class="exercisessubpage">
                 <h2>Exercise 04: Multiple Backgrounds</h2>
                 <p>Experiment with multiple backgrounds, gradients, and hover effects in this CSS3 background demo and exercise.</p>
                 <ul>

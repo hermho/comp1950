@@ -127,13 +127,15 @@ Wrapper
 */
 
 #outerwrapper {
-    background: #fff;
+    background: #000;
     
     position:relative;
     padding: 0;
 	margin: 0;
     z-index: 50;
 	overflow: hidden;
+	
+	color: #fff;
 }
 
 /*
@@ -214,7 +216,7 @@ Course Contents
 	padding-top: 5%;
 }
 #coursecontents h2 {
-	color: #003366;
+	color: #00b388;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 2.5em;
@@ -239,13 +241,13 @@ Course Contents
     display: inline-block;
     margin: 0 1%;
     width: 16%;
-	background-color: #00b388;
+	background-color: #c4d600;
 	padding: .5% 0;
 	border:none;
 	border-radius: 25px;
 }
 .button-group .button.is-checked {
-	background-color: #003366;
+	background-color: #00b388;
 }
 
 
@@ -265,10 +267,10 @@ Course Contents
 	
 }
 .lectures {
-	background-color: #003366;
+	background-color: #00b388;
 }
 .exercises {
-	background-color: #00b388;
+	background-color: #c4d600;
 }
 .homeworks {
 	background-color: #c4d600;
@@ -283,7 +285,7 @@ Course Contents
 
 /*
 +++++++++++++++++++++
-Week 06 Lecture
+Week 06
 +++++++++++++++++++++
 */
 
@@ -336,18 +338,18 @@ Week 06 Lecture
 	padding: 5% 15%;
 }
 .lecturesection h2 {
-	color: #003366;
+	color: #00b388;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 2.5em;
 }	
 .lecturesection a {
 	text-decoration: none;
-	color: #00b388;
+	color: #c4d600;
 	font-weight: bold;
 }
 .lecturesection a:hover {
-	color: #003366;
+	color: #00b388;
 }
 
 .lecturesection p {
@@ -355,14 +357,14 @@ Week 06 Lecture
 }
 .lecturesection h3 {
 	text-align: left;
-	color: #003366;
+	color: #00b388;
 }
 .lecturesection ul, .lecturesection li {
 	list-style: circle;
 	text-align: left;
 }
 .lecturesection strong {
-	color: #003366
+	color: #00b388
 }
 .lecturesection pre {
 	text-align: left;
@@ -373,7 +375,7 @@ Week 06 Lecture
 	padding: 5% 15%;
 }
 .lecturesummary h2 {
-	color: #003366;
+	color: #00b388;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 2.5em;
@@ -387,11 +389,11 @@ Week 06 Lecture
 }
 .lecturesummary a {
 	text-decoration: none;
-	color: #00b388;
+	color: #c4d600;
 	font-weight: bold;
 }
 .lecturesummary a:hover {
-	color: #003366;
+	color: #00b388;
 }
 
 /*
@@ -405,14 +407,14 @@ Week 06 Exercise
 	padding: 5% 15%;
 }
 .exercisessubpage h2 {
-	color: #003366;
+	color: #00b388;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 2.5em;
 }	
 .exercisessubpage a {
 	text-decoration: none;
-	color: #00b388;
+	color: #c4d600;
 	font-weight: bold;
 }
 .exercisessubpage a:hover {
@@ -424,14 +426,14 @@ Week 06 Exercise
 }
 .exercisessubpage h3 {
 	text-align: left;
-	color: #003366;
+	color: #00b388;
 }
 .exercisessubpage ul, .exercisessubpage li {
 	list-style: circle;
 	text-align: left;
 }
 .exercisessubpage strong {
-	color: #003366
+	color: #00b388
 }
 
 
