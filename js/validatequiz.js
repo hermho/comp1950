@@ -25,6 +25,11 @@ $(function() {
                     timerComplete();
                     return;
                 }
+                if (currentTime <= 9000) {
+                    /*styles the timer in red*/
+                    $countdown.removeClass("upperhalf");
+                    $countdown.addClass("lowerhalf");
+                }
                 currentTime -= incrementTime / 10;
                 if (currentTime < 0) currentTime = 0;
             },
@@ -33,7 +38,7 @@ $(function() {
                 
                 //disables the submit button
                 $("#submitquiz span").text("Quiz has ended");
-                hideQuizSection();
+                hideSection();
             },
             init = function() {
                 $countdown = $('#countdown');
@@ -56,17 +61,24 @@ $(function() {
         return (min > 0 ? pad(min, 2) : "00") + ":" + pad(sec, 2) + ":" + hundredths;
     }
     
-    function hideQuizSection() {
+    /*
+    ++++++++++++++++++++++++++++++++
+    For hiding/showing the timer and the quiz section
+    and for disabling the submit button
+    ++++++++++++++++++++++++++++++++
+    */
+    
+    function hideSection() {
         //disables the submit button
         $("#submitquiz").attr('disabled', true);
                 
         /*hides the quiz*/
-        $(".quizsection").removeClass("showquiz");
-        $(".quizsection").addClass("hidequiz");
+        $(".quizsection").removeClass("show");
+        $(".quizsection").addClass("hide");
 
         /*stops and hides the timer*/
-        $("#countdown").removeClass("showquiz");
-        $("#countdown").addClass("hidequiz");
+        $("#countdown").removeClass("show");
+        $("#countdown").addClass("hide");
         quizTimer.Timer.stop();
     }
 
@@ -98,18 +110,18 @@ $(function() {
             if (buttonText != "Submit Quiz") {
                 /*shows the quiz*/
                 $("#submitquiz span").text("Submit Quiz");
-                $(".quizsection").toggleClass("showquiz");
+                $(".quizsection").toggleClass("show");
                 
                 /*shows and starts the timer*/
-                $("#countdown").toggleClass("showquiz");
+                $("#countdown").toggleClass("show");
                 quizTimer.Timer.toggle();
             }
             else {
                 /*submits the quiz*/
-                alert("You have now submitted the quiz!");
+                alert("You have now submitted quiz!");
                 $("#submitquiz").hide();
                 
-                hideQuizSection();
+                hideSection();
             }
         }
     });

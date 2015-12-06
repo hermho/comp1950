@@ -1,24 +1,22 @@
-<!--
---------------------------------
-COMP 1950 PROJECT
-
-Authors:
-
-(1) Joanna Flores (#A00733856)
-- Prepared the page skeleton
-
-(2) Herman Ho
-<Place a brief description of what you implemented here>
---------------------------------
--->
-
 <!DOCTYPE html>
 <html>
 <head>
     <!--
-    --------------------------------
+    ************************************
+    COMP 1950 PROJECT
+
+    Last Updated: 2015-Dec-05
+    Authors:
+
+    (1) Joanna Flores - prepared the page skeleton
+    (2) Herman Ho - added the styling
+    ************************************
+    -->
+    
+    <!--
+    ************************************
     Page title and description
-    --------------------------------
+    ************************************
     -->
 	<title>COMP 1950 - Week 06 CSS Techniques Exercises</title>
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -26,9 +24,9 @@ Authors:
     <meta name="description" content="page description here" />
     
     <!--
-    --------------------------------
+    ************************************
     CSS files
-    --------------------------------
+    ************************************
     -->
     
     <!-- style reset -->
@@ -39,29 +37,31 @@ Authors:
     
     <!-- for fonts  -->
     <link type="text/css" href="/comp1950/css/fonts.css" rel="stylesheet" />
-	
+    
     <!-- for positioning  -->
-    <link type="text/css" href="/comp1950/css/positioning.css" rel="stylesheet" title="Black On White"/>
-	
+    <link type="text/css" href="/comp1950/css/positioning.css" rel="stylesheet"  title="Black On White" />
+    
     <!-- for alternative colours  -->
     <link type="text/css" href="/comp1950/css/positioning_invertcolors.css" rel="alternate stylesheet" title="White On Black"/>
     
     <!--
-    --------------------------------
+    ************************************
     Javascipt files
-    --------------------------------
+    ************************************
     -->
     <!-- for implementing jQuery -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     
     <!-- script files needed for implementing a side navigation -->
     <script type="text/javascript" src="/comp1950/js/jquery.mmenu.min.js"></script>
+    <script type="text/javascript" src="/comp1950/js/sidebar.js"></script>
     
-    <!-- for the navboxes in the main page and resources -->
-    <script type="text/javascript" src="/comp1950/js/isotope.pkgd.js"></script>
-    
-    <!-- for positioning -->
-    <script type="text/javascript" src="/comp1950/js/positioning.js"></script>
+    <!-- for implementing scrolling effects -->
+    <script type="text/javascript" src="/comp1950/js/jquery.scrollify.min.js"></script>
+    <script type="text/javascript" src="/comp1950/js/sectionscroll.js"></script>
+
     
     <!-- HTML5 Shiv for IE earlier than version 9 -->
 	<!--[if lt IE 9]>
@@ -69,67 +69,72 @@ Authors:
 	<![endif]-->
 </head>
 <body>
-    <!--#include virtual="/comp1950/includes/headernav.html" -->
+    <!--#include virtual="/comp1950/includes/sidenav.html" -->
     
     <div id="outerwrapper">
+        <!--#include virtual="/comp1950/includes/header.html" -->
+        <!--#include virtual="/comp1950/includes/topnav.html" -->
         
         <!--
-        --------------------------------
+        ************************************
         Main Page Content
-        --------------------------------
+        ************************************
         -->
-        <main class="exercisespage">
-		
-            <section class="splashpage">
-                <!-- splash page -->
+        <main id="container" class="exercisespage">
+            <!-- splash page -->
+            <div class="scroller splashpage" data-section-name="wk06ex00">
                 <section>
-                <h1>comp 1950 | intermediate web design & development</h1>
+                    <h1>comp 1950 | intermediate web design & development</h1>
                     <h2><span>Week 6 Exercise - </span>CSS3</h2>
                     <p>CSS3 provides greater control over the 'experience layer' of a user's interaction with a web page.</p>
                 </section>
 				<div id="colourOverlay"></div>
-            </section>			
-		            
-            <!-- Exercise #1 - CSS3 Box Model -->
-            <section class="exercisessubpage">
-                <h2>Exercise 01: CSS3 Box Model</h2>
-                <ul>
-                    <li>Experiment with the new box model properties using your preferred web browser diagnostic tool (such as Firefox's Firebug)</li>
-                    <li>The box below is <code>id="better_box_model"</code>, in the file <code>css3_samples.css</code></li>
-                    <li>Apply border-radius, text-shadow and box-shadow effects.</li>
-                </ul>
-                
-                <div id="better_box_model">
-                    <p>CSS3, a better box model</p>
-                </div>
+            </div>
+            
+            <section class="scroller exercisessubpage" data-section-name="wk06ex01">
+                <!-- Exercise #1 - CSS3 Box Model -->
+                <section>
+                    <h2>Exercise 1: CSS3 Box Model</h2>
+                    <ul>
+                        <li>Experiment with the new box model properties using your preferred web browser diagnostic tool (such as Firefox's Firebug)</li>
+                        <li>The box below is <code>id="better_box_model"</code>, in the file <code>css3_samples.css</code></li>
+                        <li>Apply border-radius, text-shadow and box-shadow effects.</li>
+                    </ul>
+
+                    <div id="better_box_model">
+                        <p>CSS3, a better box model</p>
+                    </div>
+                </section>
             </section>
             
-            <!-- Exercise #2 -- CSS3 Transitions Exercise -->
-            <section class="exercisessubpage">
-                <h2>Exercise 2: CSS3 Transitions Exercise</h2>
-                <p><a href="http://bcitcomp.ca/comp1950/downloads/transitions_exercise.zip">Download the transitions exercise starting files.</a></p>
+            <!-- Exercise #2 - CSS3 Transitions Exercise -->
+            <section>
+                <div class="scroller exercisessubpage" data-section-name="wk06ex02a">
+                    <h2>Exercise 2: CSS3 Transitions Exercise</h2>
+                    <p><a href="http://bcitcomp.ca/comp1950/downloads/transitions_exercise.zip">Download the transitions exercise starting files.</a></p>
 
-                <div id="transition_image">
-                    <img src="http://bcitcomp.ca/1950/lectures/six/images/button_green.png" id="image_bottom" alt="yellow button" width="100px" height="100px">	
-                    <img src="http://bcitcomp.ca/1950/lectures/six/images/button_yellow.png" id="image_top" alt="yellow button" width="100px" height="100px">
+                    <div id="transition_image">
+                        <img src="http://bcitcomp.ca/1950/lectures/six/images/button_green.png" id="image_bottom" alt="yellow button" />	
+                        <img src="http://bcitcomp.ca/1950/lectures/six/images/button_yellow.png" id="image_top" alt="yellow button" />
+                    </div>
+
+                    <section>
+                        <h3>Challenge A:</h3>
+                        <p>The yellow button image is absolutely positioned so that it overlaps a green button image beneath it.</p>	<ul>
+                            <li>First add a :hover pseudoclass to the <code>id="image_top"</code> that will set it's <code>opacity</code> to 0;</li>
+                            <li>Then add the transition states: First apply a transition to the opacity of <code>#image_top</code>. Note how the transtion is applied to both the :hover and non-hover states.</li>
+                            <li>Relocate the transition code from <code>#image_top</code> to <code>#image_top:hover</code>. Note how the transtion is applied to only the change from non-hover to :hover.</li>
+                            <li>For full control over this behavior, define transition code in both the before (#image_top) and after (#image_top:hover) rules.</li>
+
+                            <li>Follow the pattern:<br>
+                            <code>-vendorprefix-transition:property duration timing-function;</code></li>
+                            <li>use the notes below to guide to on the syntax</li>
+                            <li>demonstrate the finished transition to your instructor</li>
+                        </ul>
+                    </section>
                 </div>
-                
-                <section>
-                    <h3>Challenge A:</h3>
-                    <p>The yellow button image is absolutely positioned so that it overlaps a green button image beneath it.</p>	<ul>
-                        <li>First add a :hover pseudoclass to the <code>id="image_top"</code> that will set it's <code>opacity</code> to 0;</li>
-                        <li>Then add the transition states: First apply a transition to the opacity of <code>#image_top</code>. Note how the transtion is applied to both the :hover and non-hover states.</li>
-                        <li>Relocate the transition code from <code>#image_top</code> to <code>#image_top:hover</code>. Note how the transtion is applied to only the change from non-hover to :hover.</li>
-                        <li>For full control over this behavior, define transition code in both the before (#image_top) and after (#image_top:hover) rules.</li>
 
-                        <li>Follow the pattern:<br>
-                        <code>-vendorprefix-transition:property duration timing-function;</code></li>
-                        <li>use the notes below to guide to on the syntax</li>
-                        <li>demonstrate the finished transition to your instructor</li>
-                    </ul>
-                </section>
-
-                <section>
+                <section class="scroller exercisessubpage" data-section-name="wk06ex02b">
                     <h3>Challenge B:</h3>
                     <p>Add transtion code that will alter the width or the height of the form inputs when they are in the 	<code>focus</code> state.</p>
                     <ul>
@@ -143,17 +148,17 @@ Authors:
                         <label for="password">Password</label>	
                         <input type="text" name="password" id="password">
                     </form>
-                </section>
-                
-                <section>
-                    <h3>Challenges A &amp; B:</h3>
-                    <p><a href="http://bcitcomp.ca/comp1950/downloads/transitions_exercise_solution.zip">Download a sample solution</a></p> 
+                    <br />
+                    <section>
+                        <h3>Challenges A &amp; B:</h3>
+                        <p><a href="http://bcitcomp.ca/comp1950/downloads/transitions_exercise_solution.zip">Download a sample solution</a></p> 
+                    </section>
                 </section>
             </section>
             
             <!-- Exercise #3 - Animations and Keyframes -->
-            <section class="exercisessubpage">
-                <h2>Exercise 03: Animations and Keyframes</h2>
+            <section class="scroller exercisessubpage" data-section-name="wk06ex03">
+                <h2>Exercise 3: Animations and Keyframes</h2>
                 <ul>
                     <li>Download and examine these <a href="http://bcitcomp.ca/comp1950/downloads/animation_keyframes_exercise.zip">example animations</a></li>
                     <li>Try adding or changing some of the properties being animated</li>
@@ -163,8 +168,8 @@ Authors:
             </section>
             
             <!-- Exercise #4 - Multiple Backgrounds -->
-            <section class="exercisessubpage">
-                <h2>Exercise 04: Multiple Backgrounds</h2>
+            <section class="scroller exercisessubpage" data-section-name="wk06ex04">
+                <h2>Exercise 4: Multiple Backgrounds</h2>
                 <p>Experiment with multiple backgrounds, gradients, and hover effects in this CSS3 background demo and exercise.</p>
                 <ul>
                     <li><a href="http://bcitcomp.ca/comp1950/downloads/multiple_background_exercise.zip">Download the source files</a></li>
@@ -179,9 +184,9 @@ Authors:
         </main>
 
         <!--
-        --------------------------------
+        ************************************
         Footer
-        --------------------------------
+        ************************************
         -->
         <footer>
         </footer>

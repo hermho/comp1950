@@ -4,8 +4,7 @@
 COMP 1950 PROJECT
 
 Author: Joanna Flores (#A00733856)
-Last Updated: 2015-Dec-05
-Modified: Herman Ho (#A00954161)
+Last Updated: 2015-Nov-30
 -------------------------------------
 */
 
@@ -36,37 +35,93 @@ header {
     z-index: 100;
     
     color: #fff;
+    background: transparent;
 }
 
-#topnav {
-    line-height: 50px;
-    height: 50px;
+/*styles for the timer*/
+#countdown {
+    width: 150px;
+    border-radius: 25px;
     
-    padding: 5px 2%;
-	display: none;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
 }
 
-/*top navigation*/
-#topnav ul {
-    display: block;
-    padding: 0;
-    margin: 0;
+.upperhalf {
+    background-color: #000;
+    border: 2px solid #000;
 }
 
-#topnav ul {
-    float: right;
-    width: 25%;
-}
-
-#topnav ul li {
-    float: right;
-    text-align: right;
+.lowerhalf {
+    background-color: #b71c1c;
+    border: 2px solid #b71c1c;
     
-    display: inline-block;
-    line-height: 50px;
-    padding: 0 2%;
-    margin: 0;
-    list-style: none;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
+}
+
+/*top menu icons*/
+.topmenu {
+    position: fixed;
+    top: 1.75%;
+    padding-left: 1.25%;
+    z-index: 100;
+}
+
+svg.icon {
+    background-color: #fff;
+    border-radius:90%;
+    
+	width: 40px;
+	height: 40px;
+    margin: 1% 1px;
+    
+    cursor: pointer;
+}
+
+svg.icon path:first-child {
+    fill: #fff;
+}
+
+svg.icon:hover, svg.icon:hover path {
+    background-color: #00b388;
+    fill: #00b388;
+}
+
+svg.icon:hover path:last-child {
+    fill: #fff;
+}
+
+#exercise, #lecture {
+    width: 40px;
+    height: 40px;
+    
+    border-radius: 23%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#lecture, #lecture path {
+    background-color: #003366;
+    fill: #fff;
+}
+
+#exercise, #exercise path {
+    background-color: #00b388;
+    fill: #fff;
+}
+
+#lecture:hover, #lecture:hover path {
+    background-color: #000;
+    fill: #fff;
+}
+
+#exercise:hover, #exercise:hover path {
+    background-color: #000;
+    fill: #fff;
 }
 
 /*
@@ -75,50 +130,67 @@ Side Navigation
 +++++++++++++++++++++
 */
 
-.mm-menu.mm-offcanvas {
-    top: 60px;
+/*customizes the default style of the side navigation*/
+/*#menu {
+    height: 100%;
+    background-color: #616161;
 }
+
+#menu, .mm-menu .mm-navbar > *, 
+.mm-menu .mm-navbar a, 
+.mm-menu .mm-listview > li .mm-next:after,
+.mm-menu .mm-listview > li .mm-arrow:after,
+.mm-menu .mm-navbar .mm-btn:before,
+.mm-menu .mm-navbar .mm-btn:after,
+.mm-listview > li,
+.mm-listview > li:after,
+.mm-listview > li .mm-next,
+.mm-listview > li .mm-next:before {
+    color: #fff;
+    border-color: #fff;
+}
+
+.mm-listview > li:not(.mm-divider):after {
+    left: 0;
+    border-color:#fff;
+}*/
 
 /*the following creates the hamburger menu icon*/
 #trigger {
 	display: block;
-    width: 25px;
-	height: 50px;
+    width: 30px;
+	height: 25px;
 	
 	background-color: transparent;
-    float: left;
-    padding: 25px 15px;
+    float: right;
     z-index: 100;
+    margin: 1% 2%;
 }
 
-#trigger span, 
-#trigger span:before,
-#trigger span:after {
-	cursor: pointer;
-	height: 5px;
-	width: 30px;
+#menutrigger {
+    width: 40px;
+    height: 40px;
     
-    -moz-border-radius: 1px;
-    -webkit-border: 1px;
-    border-radius: 1px;
-    
-	background: #fff;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow:    0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-    box-shadow:         0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-    
-	position: absolute;
-	display: block;
-	content: '';
+    border: 3px solid #fff;
+    border-radius: 90%;
+    padding: 7px;
+    box-sizing: border-box;
 }
 
-#trigger span:before {
-	top: -10px;
+#menutrigger, #menutrigger path {
+    background-color: #fff;
+    fill: #000;
 }
 
-#trigger span:after {
-	bottom: -10px; 
+#menutrigger:hover, #menutrigger:hover path {
+    background-color: #00b388;
+    fill: #fff;
 }
+
+#menutrigger:hover {
+    border: 3px solid #00b388;
+}
+
 
 /*
 +++++++++++++++++++++
@@ -134,8 +206,17 @@ Wrapper
 	margin: 0;
     z-index: 50;
 	overflow: hidden;
-	
-	color: #fff;
+    
+    color: #fff;
+}
+
+/*for hiding and showing sections*/
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
 }
 
 /*
@@ -148,6 +229,7 @@ main {
     padding: 0 0 5% 0;
     text-align: center;
 }
+
 .splashpage, main h1, main h2, .navbox {
     text-align: center;
 }
@@ -173,6 +255,7 @@ main {
 	text-transform: lowercase;
 	font-size: 1em;
 	letter-spacing: 1.1px;
+    color: #fff;
 }
 .splashpage h2 {
 	text-transform: uppercase;
@@ -193,17 +276,24 @@ main {
 	letter-spacing: 1.1px;
 }
 #colourOverlay {
-	height: 100vh;
-	width: 100vw;
+	height: 100%;
+	width: 100%;
 	
 	background: -webkit-linear-gradient(155deg, #003366, #00b388, #c4d600);
     background: -o-linear-gradient(155deg, #003366, #00b388, #c4d600);
     background: -moz-linear-gradient(155deg, #003366, #00b388, #c4d600);
     background: linear-gradient(155deg, #003366, #00b388, #c4d600);
+    
+    background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center center;	
 	
 	overflow: hidden;
 	opacity: 0.5;
-	position: relative;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 /*
@@ -226,6 +316,10 @@ Course Contents
 	padding: 0 15%;
 }
 
+.scroller {
+    padding: 0 5% 3%;
+}
+
 /*navigation boxes found in the main page and resources*/
 .button-group {
     display: block;
@@ -241,15 +335,16 @@ Course Contents
     display: inline-block;
     margin: 0 1%;
     width: 16%;
-	background-color: #c4d600;
-	padding: .5% 0;
+    background-color: #c4d600;
+    padding: .5% 0;
 	border:none;
 	border-radius: 25px;
+    border: none;
+    outline:none;
 }
 .button-group .button.is-checked {
 	background-color: #00b388;
 }
-
 
 .grid {
     width: 85%;
@@ -264,33 +359,63 @@ Course Contents
     
     margin: 5px;
     padding: 6% 0;
-	
 }
-.lectures {
+
+/*grid links*/
+.element-item a:link, 
+.element-item a:visited {
+    color: #fff;
+	text-decoration: none;
+}
+
+.lectures, 
+.element-item.lectures a:link,
+.element-item.validators a:link {
 	background-color: #00b388;
 }
-.exercises {
+.exercises,
+.element-item.exercises a:link, 
+.element-item.browsers a:link {
 	background-color: #c4d600;
 }
-.homeworks {
+.homeworks,
+.project, 
+.element-item.project a:link,
+.element-item.homeworks a:link, 
+.element-item.tools a:link {
 	background-color: #c4d600;
 }
-.project {
-	background-color: #c4d600;
+
+.element-item.browsers a:link, 
+.element-item.validators a:link, 
+.element-item.tools a:link {
+    min-height: 100px;
 }
-.element-item a{
-	color: #fff;
-	text-decoration: none;
+
+.element-item.browsers img, 
+.element-item.tools img {
+    height: 50px;
+}
+
+.textbooks,
+.element-item.textbooks a:link {
+    background-color: #616161;
+    min-height: 365px;
+}
+
+.resourcecategory {
+    width: 80%;
+    margin: 0 auto;
 }
 
 /*
 +++++++++++++++++++++
-Week 06
+Week 06 Lecture
 +++++++++++++++++++++
 */
 
 .splashpage2 {
-	height:100vh;
+	/*height:100vh;*/
 	background-image:url("/comp1950/images/comp1950_background2.jpg");
     background-size:cover;
 	background-repeat:no-repeat;
@@ -300,15 +425,19 @@ Week 06
 }
 
 /*lecture agenda*/
-.lectureagenda{
-	position: absolute;
-	top: 50%;
+.lectureagenda {
+    /*position: absolute;
+	top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
+    */
+    padding-top: 30%;
+    
 	color: #fff;
 	z-index: 50;
-	padding-top: 30%;
+	
 }
+
 .lectureagenda h2{
 	font-family: folkster;
 	text-transform: lowercase;
@@ -332,16 +461,17 @@ Week 06
 	color: #003366;
 }
 
-
 /*lecture section*/
 .lecturesection {
-	padding: 5% 15%;
+	padding: 1.5% 15%;
 }
 .lecturesection h2 {
 	color: #00b388;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 2.5em;
+    margin: 0;
+    padding: 0;
 }	
 .lecturesection a {
 	text-decoration: none;
@@ -358,13 +488,15 @@ Week 06
 .lecturesection h3 {
 	text-align: left;
 	color: #00b388;
+    margin: 0;
+    padding: 0;
 }
 .lecturesection ul, .lecturesection li {
 	list-style: circle;
 	text-align: left;
 }
 .lecturesection strong {
-	color: #00b388
+	color: #00b388;
 }
 .lecturesection pre {
 	text-align: left;
@@ -372,13 +504,15 @@ Week 06
 
 /*lecture summary*/
 .lecturesummary {
-	padding: 5% 15%;
+	padding: 10% 15%;
 }
 .lecturesummary h2 {
 	color: #00b388;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 2.5em;
+    margin: 0;
+    padding: 0;
 }	
 .lecturesummary p {
 	text-align: left;
@@ -433,27 +567,54 @@ Week 06 Exercise
 	text-align: left;
 }
 .exercisessubpage strong {
-	color: #00b388
+	color: #00b388;
 }
 
+/*week06 exercise 2*/
+#transition_image {
+    position: relative;
+    margin-right: 30px;
+    float: left;
+}
 
-/*for quizzes*/
-.quiz > p {
+#transition_image img {
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+
+#image_top {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#transition_image + section {
+    clear: both;
+}
+
+/*
++++++++++++++++++++++
+Quiz
++++++++++++++++++++++
+*/
+.quizpage {
+    padding: 5% 15%;
+}
+
+.quizpage > p {
     text-align: center;
 }
+
+.quizpage fieldset {
+    text-align: justify;
+}
+
 .studentinfo, .quizsection {
     box-sizing: border-box;
     width: 80%;
     margin: 0 auto;
     padding: 2%;
-}
-
-.hidequiz {
-    display: none;
-}
-
-.showquiz {
-    display: block;
 }
 
 .studentinfo {
@@ -462,7 +623,7 @@ Week 06 Exercise
     border-radius: 25px;
 }
 
-.quiz textarea, .quiz input[type="text"] {
+.quizpage textarea, .quizpage input[type="text"] {
     display: block;
     width: 100%;
 }

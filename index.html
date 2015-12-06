@@ -1,26 +1,22 @@
-<!--
---------------------------------
-COMP 1950 PROJECT
-
-Authors:
-
-(1) Joanna Flores (#A00733856)
-- Prepared the page skeleton
-
-(2) Herman Ho
-- Added the styling
-
-Last Updated: 2015-Dec-05
---------------------------------
--->
-
 <!DOCTYPE html>
 <html>
 <head>
     <!--
-    --------------------------------
+    ************************************
+    COMP 1950 PROJECT
+
+    Last Updated: 2015-Dec-05
+    Authors:
+
+    (1) Joanna Flores - prepared the page skeleton
+    (2) Herman Ho - added the styling
+    ************************************
+    -->
+    
+    <!--
+    ************************************
     Page title and description
-    --------------------------------
+    ************************************
     -->
 	<title>COMP 1950 - Home</title>
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -28,9 +24,9 @@ Last Updated: 2015-Dec-05
     <meta name="description" content="page description here" />
     
     <!--
-    --------------------------------
+    ************************************
     CSS files
-    --------------------------------
+    ************************************
     -->
     
     <!-- style reset -->
@@ -41,26 +37,25 @@ Last Updated: 2015-Dec-05
     
     <!-- for fonts  -->
     <link type="text/css" href="/comp1950/css/fonts.css" rel="stylesheet" />
-
+    
     <!-- for positioning  -->
     <link type="text/css" href="/comp1950/css/positioning.css" rel="stylesheet" />
     
     <!--
-    --------------------------------
+    ************************************
     Javascipt files
-    --------------------------------
+    ************************************
     -->
     <!-- for implementing jQuery -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     
     <!-- script files needed for implementing a side navigation -->
     <script type="text/javascript" src="/comp1950/js/jquery.mmenu.min.js"></script>
+    <script type="text/javascript" src="/comp1950/js/sidebar.js"></script>
     
     <!-- for the navboxes in the main page and resources -->
     <script type="text/javascript" src="/comp1950/js/isotope.pkgd.js"></script>
-    
-    <!-- for positioning -->
-    <script type="text/javascript" src="/comp1950/js/positioning.js"></script>
+    <script type="text/javascript" src="/comp1950/js/navboxes.js"></script>
     
     <!-- HTML5 Shiv for IE earlier than version 9 -->
 	<!--[if lt IE 9]>
@@ -68,20 +63,21 @@ Last Updated: 2015-Dec-05
 	<![endif]-->
 </head>
 <body>
-    <!--#include virtual="/comp1950/includes/headernav.html" -->
+    <!--#include virtual="/comp1950/includes/sidenav.html" -->
     
     <div id="outerwrapper">
+        <!--#include virtual="/comp1950/includes/header.html" -->
         
         <!--
-        --------------------------------
+        ************************************
         Main Page Content
-        --------------------------------
+        ************************************
         -->
         <main>
             <section class="splashpage">
                 <!-- splash page -->
                 <section>
-                <h1>British Columbia Institute of Technology</h1>
+                    <h1>British Columbia Institute of Technology</h1>
                     <h2><span>Welcome to </span>COMP 1950</h2>
                     <p>Follows on from COMP 1850 in more depth and introduces new topics and techniques for developing effective web sites</p>
                 </section>
@@ -94,8 +90,8 @@ Last Updated: 2015-Dec-05
 					<h2>Course Contents</h2>
 					<p>Donec eget posuere purus, nec aliquet mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin dictum aliquet hendrerit. Aliquam a tempor dolor. Mauris vel scelerisque tortor, non ultrices sem. Nam vulputate, sem ac gravida molestie, tellus diam semper libero, ac molestie neque leo nec eros. Vivamus dignissim pulvinar sem vitae pharetra.</p>
                 </div>
-				
-                <div class="button-group filters-button-group">
+                
+                <div class="button-group indexoptions">
                     <button class="button is-checked" data-filter="*">all</button>
                     <button class="button" data-filter=".lectures">lectures</button>
                     <button class="button" data-filter=".exercises">exercises</button>
@@ -112,7 +108,7 @@ Last Updated: 2015-Dec-05
                         <a href="#">Week 01<br /><strong>Tools &amp; Standards</strong><br />Exercises</a>
                     </li>
                     <li class="element-item homeworks" data-category="homeworks">
-                        <a href="#">Week 01<br /><strong>Tools &amp; Standards</strong><br />Homework</a>
+                        <a href="/comp1950/homeworks/comp1950_homework01.pdf">Week 01<br /><strong>Tools &amp; Standards</strong><br />Homework</a>
                     </li>
                     
                     <!-- Week 2-->
@@ -123,7 +119,7 @@ Last Updated: 2015-Dec-05
                         <a href="#">Week 02<br /><strong>HTML5</strong><br />Exercises</a>
                     </li>
                     <li class="element-item homeworks" data-category="homeworks">
-                        <a href="#">Week 02<br /><strong>HTML5</strong><br />Homework</a>
+                        <a href="/comp1950/homeworks/comp1950_homework02.pdf">Week 02<br /><strong>HTML5</strong><br />Homework</a>
                     </li>
                     
                     <!-- Week 3-->
@@ -134,7 +130,7 @@ Last Updated: 2015-Dec-05
                         <a href="#">Week 03<br /><strong>CSS Techniques</strong><br />Exercises</a>
                     </li>
                     <li class="element-item homeworks" data-category="homeworks">
-                        <a href="#">Week 03<br /><strong>CSS Techniques</strong><br />Homework</a>
+                        <a href="/comp1950/homeworks/comp1950_homework03.pdf">Week 03<br /><strong>CSS Techniques</strong><br />Homework</a>
                     </li>
                     
                     <!-- Week 4-->
@@ -145,7 +141,7 @@ Last Updated: 2015-Dec-05
                         <a href="#">Week 04<br /><strong>CSS Layouts</strong><br />Exercises</a>
                     </li>
                     <li class="element-item homeworks" data-category="homeworks">
-                        <a href="#">Week 04<br /><strong>CSS Layouts</strong><br />Homework</a>
+                        <a href="/comp1950/homeworks/comp1950_homework04.pdf">Week 04<br /><strong>CSS Layouts</strong><br />Homework</a>
                     </li>
                     
                     <!-- Week 5-->
@@ -156,18 +152,18 @@ Last Updated: 2015-Dec-05
                         <a href="#">Week 05<br /><strong>Responsive CSS</strong><br />Exercises</a>
                     </li>
                     <li class="element-item homeworks" data-category="homeworks">
-                        <a href="#">Week 05<br /><strong>Responsive CSS</strong><br />Homework</a>
+                        <a href="/comp1950/homeworks/comp1950_homework05.pdf">Week 05<br /><strong>Responsive CSS</strong><br />Homework</a>
                     </li>
                     
                     <!-- Week 6-->
                     <li class="element-item lectures" data-category="lectures">
-                        <a href="/comp1950/lectures/week06.html">Week 06<br /><strong>CSS3</strong><br />Lectures</a>
+                        <a href="/comp1950/lectures/week06.html#agenda">Week 06<br /><strong>CSS3</strong><br />Lectures</a>
                     </li>
                     <li class="element-item exercises" data-category="exercises">
-                        <a href="/comp1950/exercises/week06.html">Week 06<br /><strong>CSS3</strong><br />Exercises</a>
+                        <a href="/comp1950/exercises/week06.html#wk06ex01">Week 06<br /><strong>CSS3</strong><br />Exercises</a>
                     </li>
                     <li class="element-item homeworks" data-category="homeworks">
-                        <a href="/comp1950/homeworks/week06.html">Week 06<br /><strong>CSS3</strong><br />Homework</a>
+                        <a href="/comp1950/homeworks/comp1950_homework05.pdf">Week 06<br /><strong>CSS3</strong><br />Homework</a>
                     </li>
                     
                     <!-- Week 7-->
@@ -178,7 +174,7 @@ Last Updated: 2015-Dec-05
                         <a href="#">Week 07<br /><strong>Javascript Frameworks</strong><br />Exercises</a>
                     </li>
                     <li class="element-item homeworks" data-category="homeworks">
-                        <a href="#">Week 07<br /><strong>Javascript Frameworks</strong><br />Homework</a>
+                        <a href="/comp1950/homeworks/comp1950_homework06.pdf">Week 07<br /><strong>Javascript Frameworks</strong><br />Homework</a>
                     </li>
                     
                     <!-- Week 8-->
@@ -189,7 +185,7 @@ Last Updated: 2015-Dec-05
                         <a href="#">Week 08<br /><strong>Dynamic Content</strong><br />Exercises</a>
                     </li>
                     <li class="element-item homeworks" data-category="homeworks">
-                        <a href="#">Week 08<br /><strong>Dynamic Content</strong><br />Homework</a>
+                        <a href="/comp1950/homeworks/comp1950_homework07.pdf">Week 08<br /><strong>Dynamic Content</strong><br />Homework</a>
                     </li>
                     
                     <!-- Week 9-->
@@ -200,7 +196,7 @@ Last Updated: 2015-Dec-05
                         <a href="#">Week 09<br /><strong>Templating, SEO</strong><br />Exercises</a>
                     </li>
                     <li class="element-item homeworks" data-category="homeworks">
-                        <a href="#">Week 09<br /><strong>Templating, SEO</strong><br />Homework</a>
+                        <a href="/comp1950/homeworks/comp1950_homework08.pdf">Week 09<br /><strong>Templating, SEO</strong><br />Homework</a>
                     </li>
                     
                     <!-- Week 10-->
@@ -211,7 +207,7 @@ Last Updated: 2015-Dec-05
                         <a href="#">Week 10<br /><strong>Methodology</strong><br />Exercises</a>
                     </li>
                     <li class="element-item homeworks" data-category="homeworks">
-                        <a href="#">Week 10<br /><strong>Methodology</strong><br />Homework</a>
+                        <a href="/comp1950/homeworks/comp1950_homework09.pdf">Week 10<br /><strong>Methodology</strong><br />Homework</a>
                     </li>
                     
                     <!-- Project -->
@@ -223,9 +219,9 @@ Last Updated: 2015-Dec-05
         </main>
 
         <!--
-        --------------------------------
+        ************************************
         Footer
-        --------------------------------
+        ************************************
         -->
         <footer>
         </footer>
