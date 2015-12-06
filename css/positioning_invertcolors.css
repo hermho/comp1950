@@ -411,6 +411,10 @@ Course Contents
     margin: 0 auto;
 }
 
+resourcecategory .element-item {
+    margin: 10px;
+}
+
 /*
 +++++++++++++++++++++
 Week 06 Lecture
