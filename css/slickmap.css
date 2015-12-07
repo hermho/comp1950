@@ -101,8 +101,8 @@ ol, ul {
 	-webkit-border-radius: 40px;
 }
 #primaryNav li a:hover {
-	background-color: #e2f4fd;
-	border-color: #97bdcf;
+	background-color: #00b388;
+	border-color: #00b388;
 }
 #primaryNav li:last-child {
 	background: url('/comp1950/images/L1-right.png') center top no-repeat;
@@ -134,8 +134,8 @@ ol, ul {
 	border-color: #00b388;
 }
 #primaryNav li li a:hover {
-	border-color: #94b75f;
-	background-color: #e7f1d7;
+	border-color: #c4d600;
+	background-color: #c4d600;
 }
 #primaryNav li li:first-child {
 	padding-top: 30px;
@@ -162,15 +162,15 @@ ol, ul {
 	padding: 5px 0;
 }
 #primaryNav li li li a {
-	background-color: #c4d600;
-	border-color: #c4d600;
+	background-color: #00b388;
+	border-color: #00b388;
 	font-size: 12px;
 	padding: 5px 0;
 	width: 80%;
 	float: right;
 }
 #primaryNav li li li a:hover {
-	background-color: #fffce5;
+	background-color: #c4d600;
 	border-color: #d1b62c;
 }
 #primaryNav li li li:first-child {

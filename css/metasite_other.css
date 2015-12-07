@@ -241,7 +241,7 @@ Metasite - Design
 	float: left;
 	overflow: hidden;
 	padding-top: 40px;
-	font-size: 0.8em;
+	font-size: 0.9em;
 	line-height: 135%;	
 }
 .circleBlue h2 {
@@ -346,11 +346,11 @@ Metasite - Preview
 	color: #00b388;
 }
 .iconTeal img {
-	width: 46px;
-	height: 46px;
+	width: 40px;
+	height: 40px;
 	position: absolute;
-	top: 30px;
-	left: 27px;
+	top: 32px;
+	left: 30px;
 }
 
 .iconTeal span {
@@ -368,11 +368,11 @@ Metasite - Preview
 	color: #c4d600;
 }
 .iconLime img {
-	width: 40px;
-	height: 40px;
+	width: 60px;
+	height: auto;
 	position: absolute;
-	top: 32px;
-	left: 30px;
+	top: 34px;
+	left: 21px;
 }
 
 .iconLime span {

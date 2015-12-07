@@ -37,8 +37,14 @@ Authors:
     <!-- css file needed for implementing the default style of the side navigation -->
     <link href="/comp1950/css/jquery.mmenu.css" type="text/css" rel="stylesheet" />
     
+    <!-- for fonts  -->
+    <link type="text/css" href="/comp1950/css/fonts.css" rel="stylesheet" />
+	
     <!-- for positioning  -->
-    <link type="text/css" href="/comp1950/css/positioning.css" rel="stylesheet" />
+    <link type="text/css" href="/comp1950/css/positioning.css" rel="stylesheet" title="Black On White"/>
+	
+    <!-- for alternative colours  -->
+    <link type="text/css" href="/comp1950/css/positioning_invertcolors.css" rel="alternate stylesheet" title="White On Black"/>
     
     <!--
     --------------------------------
@@ -79,9 +85,17 @@ Authors:
         Main Page Content
         --------------------------------
         -->
-        <main class="quiz page">
-            <h1>Week 05: Responsive CSS</h1>
-            <p>This quiz is to be done individually and is closed book. You have 3 minutes to finish the quiz.</p>
+        <main class="quizpage">
+		
+            <section class="splashpage3">
+                <!-- splash page -->
+                <section>
+                <h1>comp 1950 | intermediate web design & development</h1>
+                    <h2><span>Week 6 Quiz - </span>CSS3</h2>
+                    <p>This quiz is to be done individually and is closed book. You have 3 minutes to finish the quiz.</p>
+                </section>
+				<div id="colourOverlay"></div>
+            </section>	
             
             <form id="login">
                 <section class="studentinfo">
