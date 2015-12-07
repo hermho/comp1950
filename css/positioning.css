@@ -135,9 +135,10 @@ Side Navigation
 */
 
 /*customizes the default style of the side navigation*/
-/*#menu {
+#menu {
     height: 100%;
-    background-color: #616161;
+    background-color: #003366;
+    color: #fff;
 }
 
 #menu, .mm-menu .mm-navbar > *, 
@@ -151,13 +152,22 @@ Side Navigation
 .mm-listview > li .mm-next,
 .mm-listview > li .mm-next:before {
     color: #fff;
-    border-color: #fff;
+    border-color: #B0BEC5;
 }
 
 .mm-listview > li:not(.mm-divider):after {
     left: 0;
-    border-color:#fff;
-}*/
+    border-color: #B0BEC5;
+}
+
+#menu li a:hover {
+    background-color: #00b388;
+    color: #fff;
+}
+
+.mm-menu .mm-navbar a.mm-title {
+    color: #EEEEEE;
+}
 
 /*the following creates the hamburger menu icon*/
 #trigger {

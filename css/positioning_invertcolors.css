@@ -140,29 +140,25 @@ Side Navigation
 */
 
 /*customizes the default style of the side navigation*/
-/*#menu {
+#menu {
     height: 100%;
-    background-color: #616161;
-}
-
-#menu, .mm-menu .mm-navbar > *, 
-.mm-menu .mm-navbar a, 
-.mm-menu .mm-listview > li .mm-next:after,
-.mm-menu .mm-listview > li .mm-arrow:after,
-.mm-menu .mm-navbar .mm-btn:before,
-.mm-menu .mm-navbar .mm-btn:after,
-.mm-listview > li,
-.mm-listview > li:after,
-.mm-listview > li .mm-next,
-.mm-listview > li .mm-next:before {
-    color: #fff;
-    border-color: #fff;
+    background-color: #CFD8DC;
+    color: #000;
 }
 
 .mm-listview > li:not(.mm-divider):after {
     left: 0;
-    border-color:#fff;
-}*/
+}
+
+#menu li a:hover {
+    background-color: #78909C;
+    color: #fff;
+}
+
+.mm-menu .mm-navbar a.mm-title {
+    color: #616161;
+}
+
 
 /*the following creates the hamburger menu icon*/
 #trigger {
