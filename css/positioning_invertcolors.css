@@ -23,6 +23,7 @@ BCIT Blue: #003366
 
 body {
 	font-family: centuryGothic;
+    font-size:16px;
 }
 /*
 +++++++++++++++++++++
@@ -44,6 +45,9 @@ header {
 /*styles for the timer*/
 #countdown {
     width: 150px;
+    
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
     border-radius: 25px;
     
     text-align: center;
@@ -76,6 +80,9 @@ header {
 
 svg.icon {
     background-color: #fff;
+    
+    -webkit-border-radius: 90%;
+    -moz-border-radius: 90%;
     border-radius:90%;
     
 	width: 40px;
@@ -102,7 +109,10 @@ svg.icon:hover path:last-child {
     width: 40px;
     height: 40px;
     
+    -webkit-border-radius: 23%;
+    -moz-border-radius: 23%;
     border-radius: 23%;
+    
     padding: 10px;
     box-sizing: border-box;
 }
@@ -117,13 +127,9 @@ svg.icon:hover path:last-child {
     fill: #fff;
 }
 
-#lecture:hover, #lecture:hover path {
-    background-color: #000;
-    fill: #fff;
-}
-
+#lecture:hover, #lecture:hover path,
 #exercise:hover, #exercise:hover path {
-    background-color: #000;
+    background-color: #616161;
     fill: #fff;
 }
 
@@ -175,7 +181,11 @@ Side Navigation
     height: 40px;
     
     border: 3px solid #fff;
+    
+    -webkit-border-radius: 90%;
+    -moz-border-radius: 90%;
     border-radius: 90%;
+    
     padding: 7px;
     box-sizing: border-box;
 }
@@ -213,15 +223,6 @@ Wrapper
     color: #fff;
 }
 
-/*for hiding and showing sections*/
-.hide {
-    display: none;
-}
-
-.show {
-    display: block;
-}
-
 /*
 +++++++++++++++++++++
 Main Content
@@ -231,6 +232,10 @@ Main Content
 main {
     padding: 0 0 5% 0;
     text-align: center;
+}
+
+.scroller {
+    padding: 0 5% 3%;
 }
 
 .splashpage, main h1, main h2, .navbox {
@@ -244,14 +249,14 @@ main {
 	background-position:center center;	
 	overflow: hidden;
 	position: relative;
+    
+    padding: 0;
+    margin: 0;
 }
 .splashpage section {
-	position: absolute;
-	top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+	position: relative;
+    z-index: 50;
 	color: #fff;
-	z-index: 50;
 	text-shadow: 5px 5px 10px #000;
 }
 .splashpage h1 {
@@ -259,6 +264,7 @@ main {
 	font-size: 1em;
 	letter-spacing: 1.1px;
     color: #fff;
+    text-shadow: 5px 5px 10px #000;
 }
 .splashpage h2 {
 	text-transform: uppercase;
@@ -278,9 +284,13 @@ main {
 	font-weight: bold;
 	letter-spacing: 1.1px;
 }
+.splashpage em {
+    text-decoration: underline;
+}
 #colourOverlay {
 	height: 100%;
 	width: 100%;
+    padding-top: 15%;
 	
 	background: -webkit-linear-gradient(155deg, #003366, #00b388, #c4d600);
     background: -o-linear-gradient(155deg, #003366, #00b388, #c4d600);
@@ -292,12 +302,9 @@ main {
 	background-position:center center;	
 	
 	overflow: hidden;
-	opacity: 0.5;
-    
-    position: absolute;
-    top: 0;
-    left: 0;
+	opacity: 0.7;
 }
+
 
 /*
 +++++++++++++++++++++
@@ -315,12 +322,15 @@ Course Contents
 	font-size: 2.5em;
 }	
 
-#coursecontents p {
+#coursecontents p, 
+#coursecontents ul {
 	padding: 0 15%;
+    text-align: justify;
 }
 
-.scroller {
-    padding: 0 5% 3%;
+#coursecontents ul li {
+	margin: 0 5%;
+    text-align: justify;
 }
 
 /*navigation boxes found in the main page and resources*/
@@ -338,17 +348,28 @@ Course Contents
     display: inline-block;
     margin: 0 1%;
     width: 16%;
-    background-color: #c4d600;
+    background-color: #00b388;
     padding: .5% 0;
 	border:none;
+    
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
 	border-radius: 25px;
+    
     border: none;
     outline:none;
 }
+
 .button-group .button.is-checked {
-	background-color: #00b388;
+	background-color: #003366;
 }
 
+.button-group button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/*grid links*/
 .grid {
     width: 85%;
     margin: 0 auto;
@@ -359,40 +380,60 @@ Course Contents
     float: left;
     display: block;
     width: 200px;
-    
+    min-height: 200px;
     margin: 5px;
-    padding: 6% 0;
 }
 
-/*grid links*/
 .element-item a:link, 
 .element-item a:visited {
     color: #fff;
 	text-decoration: none;
+    
+    display: block;
+    padding-top: 30%;
 }
 
 .lectures, 
+.validators,
 .element-item.lectures a:link,
 .element-item.validators a:link {
-	background-color: #00b388;
+	background-color: #003366;
 }
+
 .exercises,
+.browsers,
 .element-item.exercises a:link, 
 .element-item.browsers a:link {
-	background-color: #c4d600;
+	background-color: #00b388;
 }
+
 .homeworks,
 .project, 
+.tools,
 .element-item.project a:link,
 .element-item.homeworks a:link, 
 .element-item.tools a:link {
 	background-color: #c4d600;
 }
 
-.element-item.browsers a:link, 
-.element-item.validators a:link, 
-.element-item.tools a:link {
-    min-height: 100px;
+.textbooks,
+.element-item.textbooks a:link {
+    background-color: #616161;
+    min-height: 400px;
+}
+
+.element-item.validators a,
+.element-item.browsers a,
+.element-item.tools a,
+.element-item.textbooks a {
+    padding-top: 0;
+}
+
+.validators a img,
+.browsers a img,
+.tools a img,
+.textbooks a img {
+    padding: 50px 0px 0px;
 }
 
 .element-item.browsers img, 
@@ -400,19 +441,9 @@ Course Contents
     height: 50px;
 }
 
-.textbooks,
-.element-item.textbooks a:link {
-    background-color: #616161;
-    min-height: 365px;
-}
-
 .resourcecategory {
     width: 80%;
     margin: 0 auto;
-}
-
-resourcecategory .element-item {
-    margin: 10px;
 }
 
 /*
@@ -422,7 +453,7 @@ Week 06 Lecture
 */
 
 .splashpage2 {
-	/*height:100vh;*/
+	height:100vh;
 	background-image:url("/comp1950/images/comp1950_background2.jpg");
     background-size:cover;
 	background-repeat:no-repeat;
@@ -432,39 +463,32 @@ Week 06 Lecture
 }
 
 /*lecture agenda*/
-.lectureagenda {
-    /*position: absolute;
-	top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    */
-    padding-top: 30%;
-    
+.agenda {
+    position: relative;
+    z-index:50;
 	color: #fff;
-	z-index: 50;
-	
 }
 
-.lectureagenda h2{
+.agenda h2{
 	font-family: folkster;
 	text-transform: lowercase;
 	font-size: 2em;
 	font-weight: normal;
 	padding-top: 10px;
 }
-.lectureagenda ul {
+.agenda ul {
 	list-style: none;
 	padding-left: 0;
 }
-.lectureagenda li {
+.agenda li {
 	font-weight: bold;
 	font-size: 0.9em;
 }
-.lectureagenda a {
+.agenda a {
 	text-decoration: none;
 	color: #fff;
 }
-.lectureagenda a:hover {
+.agenda a:hover {
 	color: #003366;
 }
 
@@ -477,7 +501,7 @@ Week 06 Lecture
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 2.5em;
-    margin: 0;
+    margin: 1.5% 0;
     padding: 0;
 }	
 .lecturesection a {
@@ -491,11 +515,12 @@ Week 06 Lecture
 
 .lecturesection p {
 	text-align: left;
+    margin: 0.5% 0;
 }
 .lecturesection h3 {
 	text-align: left;
 	color: #00b388;
-    margin: 0;
+    margin: 1% 0;
     padding: 0;
 }
 .lecturesection ul, .lecturesection li {
@@ -536,6 +561,15 @@ Week 06 Lecture
 .lecturesummary a:hover {
 	color: #00b388;
 }
+.lecturesummary div {
+    border: 2px solid #C0C0C0;
+    
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    
+    padding: 5%;
+}
 
 /*
 +++++++++++++++++++++
@@ -545,7 +579,7 @@ Week 06 Exercise
 
 /*exercise section*/
 .exercisessubpage {
-	padding: 5% 15%;
+	padding: 1% 15%;
 }
 .exercisessubpage h2 {
 	color: #00b388;
@@ -606,15 +640,33 @@ Quiz
 +++++++++++++++++++++
 */
 .quizpage {
-    padding: 5% 15%;
+    padding: 0;
+}
+
+.quizpage #colourOverlay {
+    padding-top: 5%;
 }
 
 .quizpage > p {
     text-align: center;
 }
 
+#quizform {
+    padding: 5% 15% 2%;
+}
+
+#quizform h2 {
+	color: #003366;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 2.5em;
+    margin: 0;
+    padding: 0;
+}	
+
 .quizpage fieldset {
     text-align: justify;
+    border: none;
 }
 
 .studentinfo, .quizsection {
@@ -627,31 +679,93 @@ Quiz
 .studentinfo {
     border: 3px solid #000;
     width: 70%;
+    
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
     border-radius: 25px;
-}
-
-.quizpage textarea, .quizpage input[type="text"] {
-    display: block;
-    width: 100%;
+    
+    margin-bottom: 1%;
 }
 
 textarea {
     resize: none;
-    padding: 0;
 }
 
-fieldset {
-    border: none;
+code {
+    font-weight: bold;
 }
 
-#submitquiz {
+.quizpage textarea, .quizpage input[type="text"] {
+    display: block;
+    width: 95%;
+    outline:none;
+    border: solid 2px #616161;
+    background-color: #ECEFF1;
+    padding: 3px 5px;
+    margin: 0 auto;
+    
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    
+    color: #000;
+}
+
+.quizpage input[type="text"]:focus,
+.quizpage input[type="text"].focus,
+.quizpage textArea:focus,
+.quizpage textArea.focus {
+    border: solid 2px #2c3e50;
+    background-color: #B0BEC5;
+    
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+#submitquiz, #startquiz {
     display: block;
     width: 150px;
-    margin: 1% auto;
+    margin: 0 auto 2%;
+    background-color: #003366;
+    padding: .5% 0;
+    
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+	border-radius: 25px;
+    
+    border: none;
+    outline:none;
+    
+    color: #fff;
+}
+
+#submitquiz:hover, #startquiz:hover {
+    background:#000;
+}
+
+#submitquiz span, #startquiz span {
+    font-family: centuryGothic;
+    font-size: 1em;
 }
 
 #countdown {
     position: fixed;
     top: 20px;
     left: 70px;
+}
+
+/*for hiding and showing sections*/
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
 }

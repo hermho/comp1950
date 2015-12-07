@@ -75,23 +75,30 @@
         ************************************
         -->
         <main class="quizpage">
-            <h1>British Columbia Institute of Technology</h1>
-            <p>This quiz is to be done individually and is closed book. You have 3 minutes to finish the quiz.</p>
-            
-            <form id="login">
-                <section class="studentinfo">
-                    <h2>Student Information:</h2>
-                    <div class="row">
-                        <p><strong>Name:</strong></p>
-                        <input type="text" id="name" required="required" autofocus="autofocus" />
-                    </div>
-                    <div class="row">
-                        <p><strong>Student Number:</strong></p>
-                        <input type="text" id="studentnumber" value="A00" required="required" pattern="A00[0-9]{6}" title="The student number must start with A00 followed by 6-digits" />
-                    </div>
-                </section>
-                <section id="quizsection" class="quizsection hide">
-                    <h2>Quiz #5 - Responsive CSS</h2>
+            <div class="splashpage">
+                <div id="colourOverlay">
+                    <h1>British Columbia Institute of Technology</h1>
+                    <section>
+                        <h2><span>Week #5</span> - Responsive CSS</h2>
+                        <p>This quiz is to be done individually and is closed book. You have <em>3 minutes</em> to finish the quiz.</p>
+                    </section>
+                    <section class="studentinfo">
+                        <h2>Student Information:</h2>
+                        <div class="row">
+                            <p><strong>Name:</strong></p>
+                            <input type="text" id="name" required="required" autofocus="autofocus" />
+                        </div>
+                        <div class="row">
+                            <p><strong>Student Number:</strong></p>
+                            <input type="text" id="studentnumber" value="A00" required="required" pattern="A00[0-9]{6}" title="The student number must start with A00 followed by 6-digits" />
+                        </div>
+                    </section>
+                    <button id="startquiz" type="button"><span>Start Quiz</span></button>
+                </div>
+            </div>
+            <form id="quizform" class="hide">
+                <section id="quizsection" class="quizsection">
+                    <h2>Quiz #5</h2>
                     <ol>
                         <li>
                             <p>Name at least two things that you should do to a web page to display it for printing (2 marks)</p>
@@ -136,8 +143,8 @@
                         </li>
                     </ol>
                 </section>
+                <button id="submitquiz" type="submit"><span>Start Quiz</span></button>
             </form>
-            <button id="submitquiz" type="submit"><span>Start Quiz</span></button>
         </main>
 
         <!--

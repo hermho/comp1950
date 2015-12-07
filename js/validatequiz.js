@@ -36,8 +36,6 @@ $(function() {
             timerComplete = function() {
                 alert("The quiz has ended. You can no longer submit the quiz.");
                 
-                //disables the submit button
-                $("#submitquiz span").text("Quiz has ended");
                 hideSection();
             },
             init = function() {
@@ -70,16 +68,22 @@ $(function() {
     
     function hideSection() {
         //disables the submit button
+        $("#startquiz").attr('disabled', true);
         $("#submitquiz").attr('disabled', true);
                 
         /*hides the quiz*/
-        $(".quizsection").removeClass("show");
-        $(".quizsection").addClass("hide");
+        $("#quizform").removeClass("show");
+        $("#quizform").addClass("hide");
 
         /*stops and hides the timer*/
         $("#countdown").removeClass("show");
         $("#countdown").addClass("hide");
         quizTimer.Timer.stop();
+        
+        //disables the submit and start buttons
+        $("#startquiz span").text("Quiz has ended");
+        $("#startquiz").show();
+        $("#submitquiz").hide();
     }
 
     
@@ -89,7 +93,7 @@ $(function() {
     ++++++++++++++++++++++++++++++++
     */
     
-    $("#submitquiz").click(function(event){
+    $("#startquiz").click(function(event){
         event.preventDefault();
         
         /*gets the student information*/
@@ -106,23 +110,33 @@ $(function() {
             alert("Please provide a valid student number. The student number must start with A00 followed by 6-digits.");
         }
         else {
-            var buttonText = $("#submitquiz span").text();
+            var buttonText = $("#startquiz span").text();
             if (buttonText != "Submit Quiz") {
                 /*shows the quiz*/
                 $("#submitquiz span").text("Submit Quiz");
-                $(".quizsection").toggleClass("show");
+                $("#quizform").toggleClass("show");
                 
                 /*shows and starts the timer*/
                 $("#countdown").toggleClass("show");
                 quizTimer.Timer.toggle();
-            }
-            else {
-                /*submits the quiz*/
-                alert("You have now submitted quiz!");
-                $("#submitquiz").hide();
+                $("#startquiz span").text("Quiz has started");
                 
-                hideSection();
+                /*hides the start quiz button*/
+                $("#startquiz").attr('disabled', true);
+                
+                /*focuses on item#1*/
+                $("#item1").focus();
             }
         }
+    });
+    
+    $("#submitquiz").click(function(event){
+        event.preventDefault();
+        
+        /*submits the quiz*/
+        alert("You have now submitted quiz!");
+        $("#submitquiz").hide();
+
+        hideSection();
     });
 });

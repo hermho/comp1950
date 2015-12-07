@@ -83,12 +83,13 @@
         <main id="container" class="exercisespage">
             <!-- splash page -->
             <div class="scroller splashpage" data-section-name="wk06ex00">
-                <section>
+                <div id="colourOverlay">
                     <h1>comp 1950 | intermediate web design & development</h1>
-                    <h2><span>Week 6 Exercise - </span>CSS3</h2>
-                    <p>CSS3 provides greater control over the 'experience layer' of a user's interaction with a web page.</p>
-                </section>
-				<div id="colourOverlay"></div>
+                    <section>
+                        <h2><span>Week 6 Exercise - </span>CSS3</h2>
+                        <p>CSS3 provides greater control over the 'experience layer' of a user's interaction with a web page.</p>
+                    </section>
+				</div>
             </div>
             
             <div class="scroller exercisessubpage" data-section-name="wk06ex01">
@@ -98,56 +99,45 @@
                     <ul>
                         <li>Experiment with the new box model properties using your preferred web browser diagnostic tool (such as Firefox's Firebug)</li>
                         <li>The box below is <code>id="better_box_model"</code>, in the file <code>css3_samples.css</code></li>
-                        <li>Apply border-radius, text-shadow and box-shadow effects.</li>
+                        <li>Edit the following code in CodePen and apply border-radius, text-shadow and box-shadow effects.</li>
                     </ul>
 
-                    <div id="better_box_model">
-                        <p>CSS3, a better box model</p>
+                    <div class="demo">
+                        <p data-height="268" data-theme-id="0" data-slug-hash="xZbxVE" data-default-tab="html" data-user="jflores15" class='codepen'>See the Pen <a href='http://codepen.io/jflores15/pen/xZbxVE/'>Week 6 - Exercise 1</a> by Joanna Flores (<a href='http://codepen.io/jflores15'>@jflores15</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
                     </div>
                 </section>
             </div>
             
             <!-- Exercise #2 - CSS3 Transitions Exercise -->
             <div>
-                <section class="scroller exercisessubpage" data-section-name="wk06ex02a">
+                <div class="scroller exercisessubpage" data-section-name="wk06ex02a">
                     <h2>Exercise 2: CSS3 Transitions Exercise</h2>
-                    <p><a href="http://bcitcomp.ca/comp1950/downloads/transitions_exercise.zip">Download the transitions exercise starting files.</a></p>
-
-                    <div id="transition_image">
-                        <img src="http://bcitcomp.ca/1950/lectures/six/images/button_green.png" id="image_bottom" alt="yellow button" />	
-                        <img src="http://bcitcomp.ca/1950/lectures/six/images/button_yellow.png" id="image_top" alt="yellow button" />
-                    </div>
-
                     <section>
                         <h3>Challenge A:</h3>
-                        <p>The yellow button image is absolutely positioned so that it overlaps a green button image beneath it.</p>	<ul>
-                            <li>First add a :hover pseudoclass to the <code>id="image_top"</code> that will set it's <code>opacity</code> to 0;</li>
-                            <li>Then add the transition states: First apply a transition to the opacity of <code>#image_top</code>. Note how the transtion is applied to both the :hover and non-hover states.</li>
-                            <li>Relocate the transition code from <code>#image_top</code> to <code>#image_top:hover</code>. Note how the transtion is applied to only the change from non-hover to :hover.</li>
-                            <li>For full control over this behavior, define transition code in both the before (#image_top) and after (#image_top:hover) rules.</li>
-
-                            <li>Follow the pattern:<br>
+                        <p><a href="http://bcitcomp.ca/comp1950/downloads/transitions_exercise.zip">Download the transitions exercise starting files.</a></p>
+                        <p>The yellow button image in this exercise is absolutely positioned so that it overlaps a green button image beneath it. Use the notes included in CodePen as guide on the transition and hover effects needed to be applied for this element.</p>
+                        <p>
+                            Remember to follow the pattern:<br />
                             <code>-vendorprefix-transition:property duration timing-function;</code></li>
-                            <li>use the notes below to guide to on the syntax</li>
-                            <li>demonstrate the finished transition to your instructor</li>
-                        </ul>
+                        </p>
+                        <p>Demonstrate the finished transition to your instructor</p>
+                        <div class="demo">
+                            <p data-height="250" data-theme-id="0" data-slug-hash="YwPzGE" data-default-tab="html" data-user="jflores15" class='codepen'>See the Pen <a href='http://codepen.io/jflores15/pen/YwPzGE/'>Week 6 - Exercise 2a</a> by Joanna Flores (<a href='http://codepen.io/jflores15'>@jflores15</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+    <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+                        </div>
                     </section>
-                </section>
+                </div>
 
                 <section class="scroller exercisessubpage" data-section-name="wk06ex02b">
                     <h3>Challenge B:</h3>
-                    <p>Add transtion code that will alter the width or the height of the form inputs when they are in the 	<code>focus</code> state.</p>
-                    <ul>
-                        <li>transition either the width or the height. note how you will need to set the width in CSS for both the :focus and not :focused states.</li>
-                        <li>try transitioning several CSS properties (<code>width</code>, <code>height</code> and <code>border</code>) at once by using <code>all</code> as the assigned transitional property, eg: <code>transition:all 1s ease;</code></li>
-
-                    </ul>
-                    <form>
-                        <label for="username">Username</label>	
-                        <input type="text" name="username" id="username">
-                        <label for="password">Password</label>	
-                        <input type="text" name="password" id="password">
-                    </form>
+                    <p><a href="http://bcitcomp.ca/comp1950/downloads/transitions_exercise.zip">Download the transitions exercise starting files.</a></p>
+                    <p>Add the transition code that will alter the width or the height of the form inputs when they are in the 	<code>focus</code> state. Use the notes included in CodePen as guide on the transition effects needed to be applied for these elements.</p>
+                    <p>Demonstrate the finished transition to your instructor</p>
+                    <div class="demo">
+                        <p data-height="275" data-theme-id="0" data-slug-hash="BjyaWG" data-default-tab="html" data-user="jflores15" class='codepen'>See the Pen <a href='http://codepen.io/jflores15/pen/BjyaWG/'>Week 6 - Exercise 2b</a> by Joanna Flores (<a href='http://codepen.io/jflores15'>@jflores15</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+                    </div>
                     <br />
                     <section>
                         <h3>Challenges A &amp; B:</h3>
@@ -161,10 +151,14 @@
                 <h2>Exercise 3: Animations and Keyframes</h2>
                 <ul>
                     <li>Download and examine these <a href="http://bcitcomp.ca/comp1950/downloads/animation_keyframes_exercise.zip">example animations</a></li>
-                    <li>Try adding or changing some of the properties being animated</li>
+                    <li>Try adding or changing some of the properties being animated in CodePen</li>
                     <li>Create a new animation to change the width and height of one of the images used on these pages</li>	
                     <li>Download  a <a href="http://bcitcomp.ca/comp1950/downloads/animation_keyframes_solution.zip">sample solution</a></li>
                 </ul>
+                <div class="demo">
+                    <p data-height="350" data-theme-id="0" data-slug-hash="ZQYEJb" data-default-tab="html" data-user="jflores15" class='codepen'>See the Pen <a href='http://codepen.io/jflores15/pen/ZQYEJb/'>Week 6 - Exercise 3</a> by Joanna Flores (<a href='http://codepen.io/jflores15'>@jflores15</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+                </div>
             </section>
             
             <!-- Exercise #4 - Multiple Backgrounds -->
@@ -179,6 +173,10 @@
                     <li>Try applying a <code>transition</code> effect on the <code>:hover</code>. How does the browser handle this?</li>
                      <li><a href="http://bcitcomp.ca/comp1950/downloads/multiple_background_exercise_solution.zip">Download a sample solution</a></li> 
                 </ul>
+                <div class="demo">
+                    <p data-height="280" data-theme-id="0" data-slug-hash="ZQYEvQ" data-default-tab="css" data-user="jflores15" class='codepen'>See the Pen <a href='http://codepen.io/jflores15/pen/ZQYEvQ/'>Week 6 - Exercise 4</a> by Joanna Flores (<a href='http://codepen.io/jflores15'>@jflores15</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+                </div>
             </section>
 
         </main>

@@ -81,25 +81,26 @@
         <main id="container" class="lecturepage">
             <!-- splash page -->
             <div class="scroller splashpage" data-section-name="agenda">
-                <section>
+                <div id="colourOverlay">
                     <h1>comp 1950 | intermediate web design & development</h1>
-                    <h2><span>Week 6 Lecture - </span>CSS3</h2>
-                    <p>CSS3 provides greater control over the 'experience layer' of a user's interaction with a web page.</p>
-                </section>
-				
-				<section class="lectureagenda">
-            	<!-- Section #0 - Class Agenda -->
-					<h2>Lecture Agenda</h2>
-					<ul>	
-						<li><a href="#">Quiz #5</a></li>
-						<li><a href="#">CSS3</a></li>
-						<li><a href="#">Compatibility</a></li>
-						<li><a href="#">Box model</a></li>
-						<li><a href="#">Transitions</a></li>
-						<li><a href="#">Backgrounds</a></li>
-					</ul>
-				</section>				
-				<div id="colourOverlay"></div>
+                    <section>
+                        <h2><span>Week 6 Lecture - </span>CSS3</h2>
+                        <p>CSS3 provides greater control over the 'experience layer' of a user's interaction with a web page.</p>
+                    </section>
+
+                    <section class="agenda">
+                    <!-- Section #0 - Class Agenda -->
+                        <h2>Lecture Agenda</h2>
+                        <ul>	
+                            <li><a href="#">Quiz #5</a></li>
+                            <li><a href="#">CSS3</a></li>
+                            <li><a href="#">Compatibility</a></li>
+                            <li><a href="#">Box model</a></li>
+                            <li><a href="#">Transitions</a></li>
+                            <li><a href="#">Backgrounds</a></li>
+                        </ul>
+                    </section>			
+				</div>
             </div>
 
             <!-- Section #1 - Introducing CSS3 -->
@@ -548,22 +549,24 @@
 
             <!-- Section #10 - Summary -->
             <section class="scroller lecturesummary" data-section-name="summary">
-                <h2>Summary</h2>
-                <ul>
-                    <li>Precede your CSS properties with any/all available vendor prefixed versions</li>
-                    <li>For some of the trickier properties, use online code generators:
-                        <ul>
-                            <li><a href="http://css3gen.com/border-radius/">Border radius</a></li>
-                            <li><a href="http://css3gen.com/box-shadow/">Box shadows</a></li>
-                            <li><a href="http://css3gen.com/text-shadow/">Text shadows</a></li>
-                            <li><a href="http://border-image.com/#%7B%22src%22%3A%22http%3A%2F%2Fwww.w3.org%2FTR%2Fcss3-background%2Fborder.png%22%2C%22linkBorder%22%3Atrue%2C%22borderWidth%22%3A%5B0%2C0%2C0%2C0%5D%2C%22imageOffset%22%3A%5B27%2C27%2C27%2C27%5D%2C%22fill%22%3Atrue%2C%22setRepat%22%3Afalse%2C%22repeat%22%3A%5B%22repeat%22%2C%22repeat%22%5D%2C%22scaleFactor%22%3A3%2C%22setRepeat%22%3Atrue%7D">Border Images</a></li>
-                            <li><a href="http://www.css-opacity.pascal-seven.de/">Opacity</a></li>
-                            <li><a href="http://css3gen.com/gradient-generator/">Gradients</a></li>
-                        </ul>
-                    </li>
-                    <li>Stay up to date as CSS3 progresses, regularly consult the <a href="http://css3test.com/">CSS3 Browser Compatibility Test</a></li>
-                </ul>
-                <p>There will be no quiz next class, session #7</p>
+                <div>
+                    <h2>Summary</h2>
+                    <ul>
+                        <li>Precede your CSS properties with any/all available vendor prefixed versions</li>
+                        <li>For some of the trickier properties, use online code generators:
+                            <ul>
+                                <li><a href="http://css3gen.com/border-radius/">Border radius</a></li>
+                                <li><a href="http://css3gen.com/box-shadow/">Box shadows</a></li>
+                                <li><a href="http://css3gen.com/text-shadow/">Text shadows</a></li>
+                                <li><a href="http://border-image.com/#%7B%22src%22%3A%22http%3A%2F%2Fwww.w3.org%2FTR%2Fcss3-background%2Fborder.png%22%2C%22linkBorder%22%3Atrue%2C%22borderWidth%22%3A%5B0%2C0%2C0%2C0%5D%2C%22imageOffset%22%3A%5B27%2C27%2C27%2C27%5D%2C%22fill%22%3Atrue%2C%22setRepat%22%3Afalse%2C%22repeat%22%3A%5B%22repeat%22%2C%22repeat%22%5D%2C%22scaleFactor%22%3A3%2C%22setRepeat%22%3Atrue%7D">Border Images</a></li>
+                                <li><a href="http://www.css-opacity.pascal-seven.de/">Opacity</a></li>
+                                <li><a href="http://css3gen.com/gradient-generator/">Gradients</a></li>
+                            </ul>
+                        </li>
+                        <li>Stay up to date as CSS3 progresses, regularly consult the <a href="http://css3test.com/">CSS3 Browser Compatibility Test</a></li>
+                    </ul>
+                    <p>There will be no quiz next class, session #7</p>
+                </div>
             </section>
         </main>
 
