@@ -21,7 +21,25 @@ $(function() {
     var lecture = $("#lecture");
     var exercise = $("#exercise");
     
-    //waits for the SVG elements to load before initializing the scrollify plugin
+    //initializes the scrollify plugin
+    $.scrollify({
+        // defines the element that will be scrolled
+        section : ".scroller",
+
+        // Defines the easing method and speed.
+        easing: "easeInOutExpo",
+        scrollSpeed: 1100,
+
+        // after scrollify is called, 
+        // the following function hides/shows top navigational icons depending on the current section
+        after:function() { displayLinks(arguments[0], arguments[1].length, arguments[1][arguments[0]]); },
+
+        // A distance in pixels to offset each sections position by.
+        offset : 0
+
+    });
+    
+    //waits for the SVG elements to load before hiding the icons
     function checkReady() {
         
         if (exercise == null) {
@@ -29,24 +47,6 @@ $(function() {
         } else {
             hidePageLinks();
             up.css('visibility', 'hidden');
-            
-            //initializes the scrollify plugin
-            $.scrollify({
-                // defines the element that will be scrolled
-                section : ".scroller",
-
-                // Defines the easing method and speed.
-                easing: "easeInOutExpo",
-                scrollSpeed: 1100,
-                
-                // after scrollify is called, 
-                // the following function hides/shows top navigational icons depending on the current section
-                after:function() { displayLinks(arguments[0], arguments[1].length, arguments[1][arguments[0]]); },
-
-                // A distance in pixels to offset each sections position by.
-                offset : 0
-
-            });
         }
     }
     setTimeout(checkReady(), 2000);
@@ -193,6 +193,20 @@ $(function() {
         else {
             //scrolls to the selected section
             $.scrollify.move("#" + linkIndex[1]);
+        }
+    });
+    
+    $(".animsition-link").each(function(i, obj) {
+        
+        var linkIndex = $(this).attr("href").split('#');
+        var destination = linkIndex[0].split("/");
+        var currentlocation = window.location.href.split("/");
+        
+        if (destination[destination.length-2] == currentlocation[currentlocation.length-2]) {
+            $(this).removeClass("animsition-link");
+        }
+        else {
+            $(this).addClass("animsition-link");
         }
     });
 });

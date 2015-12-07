@@ -35,6 +35,9 @@
     <!-- css file needed for implementing the default style of the side navigation -->
     <link href="/comp1950/css/jquery.mmenu.css" type="text/css" rel="stylesheet" />
     
+    <!-- for implementing page transitions -->
+    <link type="text/css" href="/comp1950/css/animsition.min.css" rel="stylesheet" />
+    
     <!-- for fonts  -->
     <link type="text/css" href="/comp1950/css/fonts.css" rel="stylesheet" />
     
@@ -58,6 +61,10 @@
     <script type="text/javascript" src="/comp1950/js/jquery.mmenu.min.js"></script>
     <script type="text/javascript" src="/comp1950/js/sidebar.js"></script>
     
+    <!-- for implementing page transitions -->
+    <script type="text/javascript" src="/comp1950/js/animsition.min.js"></script>
+    <script type="text/javascript" src="/comp1950/js/pagetransition.js"></script>
+    
     <!-- for implementing scrolling effects -->
     <script type="text/javascript" src="/comp1950/js/jquery.scrollify.min.js"></script>
     <script type="text/javascript" src="/comp1950/js/sectionscroll.js"></script>
@@ -69,6 +76,11 @@
 	<![endif]-->
 </head>
 <body>
+    <div  class="animsition"
+          data-animsition-in-class="fade-in"
+          data-animsition-in-duration="1000"
+          data-animsition-out-class="fade-out"
+          data-animsition-out-duration="800">
     <!--#include virtual="/comp1950/includes/sidenav.html" -->
     
     <div id="outerwrapper">
@@ -190,6 +202,6 @@
         </footer>
         
     </div>    
-    
+    </div>
 </body>
 </html>
