@@ -180,6 +180,14 @@ $(function() {
         }
     });
     
+    $(".agendalink").click(function (e) {
+        e.preventDefault();
+        var linkIndex = $(this).attr("href").split('#');
+        
+        //scrolls to the selected section
+        $.scrollify.move("#" + linkIndex[1]);
+    });
+    
     $(".exercise06 a").click(function (e) {
         e.preventDefault();
         var linkIndex = $(this).attr("href").split('#');
