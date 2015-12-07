@@ -100,7 +100,9 @@ svg.icon:hover path:last-child {
     fill: #fff;
 }
 
-#exercise, #lecture {
+#exercise, 
+#lecture,
+#switchstyle {
     width: 40px;
     height: 40px;
     
@@ -126,6 +128,33 @@ svg.icon:hover path:last-child {
 #exercise:hover, #exercise:hover path {
     background-color: #000;
     fill: #fff;
+}
+
+#switchstyle {
+    -webkit-border-radius: 90%;
+    -moz-border-radius: 90%;
+    border-radius: 90%;
+    
+    border: 3px solid #000;
+    padding: 7px;
+}
+
+#switchstyle, #switchstyle path {
+    background-color: #fff;
+    fill: #000;
+}
+
+#switchstyle rect {
+    fill: #fff;
+}
+
+#switchstyle:hover, #switchstyle:hover path {
+    background-color: #000;
+    fill: #fff;
+}
+
+#switchstyle:hover rect {
+    fill: #000;
 }
 
 /*
@@ -172,13 +201,17 @@ Side Navigation
 /*the following creates the hamburger menu icon*/
 #trigger {
 	display: block;
-    width: 30px;
+    width: 90px;
 	height: 25px;
 	
 	background-color: transparent;
     float: right;
     z-index: 100;
     margin: 1% 2%;
+}
+
+#trigger a {
+    display: inline-block;
 }
 
 #menutrigger {

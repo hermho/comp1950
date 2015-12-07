@@ -16,4 +16,28 @@ $(function() {
     $("#menu").mmenu({
         slidingSubmenus: true
     });
+    
+    /*
+    ++++++++++++++++++++++++++++++++
+    For switching styles
+    ++++++++++++++++++++++++++++++++
+    */
+    
+    $("#switchstylelink").click(function(event){
+        event.preventDefault();
+
+        var currentstyle = $(this).attr('class');
+        if (currentstyle == "day") {
+            setActiveStyleSheet('White on Black');
+            
+            $(this).removeClass("day");
+            $(this).addClass("night");
+        }
+        else {
+            setActiveStyleSheet('Black on White');
+            
+            $(this).removeClass("night");
+            $(this).addClass("day");
+        }
+    });
 });

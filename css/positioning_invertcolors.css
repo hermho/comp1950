@@ -56,8 +56,8 @@ header {
 }
 
 .upperhalf {
-    background-color: #000;
-    border: 2px solid #000;
+    background-color: #616161;
+    border: 2px solid #616161;
 }
 
 .lowerhalf {
@@ -105,7 +105,9 @@ svg.icon:hover path:last-child {
     fill: #fff;
 }
 
-#exercise, #lecture {
+#exercise, 
+#lecture,
+#switchstyle {
     width: 40px;
     height: 40px;
     
@@ -133,6 +135,37 @@ svg.icon:hover path:last-child {
     fill: #fff;
 }
 
+#switchstyle {
+    -webkit-border-radius: 90%;
+    -moz-border-radius: 90%;
+    border-radius: 90%;
+    
+    border: 3px solid #fff;
+    padding: 7px;
+}
+
+#switchstyle, #switchstyle path {
+    background-color: #fff;
+    fill: #000;
+}
+
+#switchstyle rect {
+    fill: #fff;
+}
+
+#switchstyle:hover, #switchstyle:hover path {
+    background-color: #00b388;
+    fill: #fff;
+}
+
+#switchstyle:hover {
+    border: 3px solid #00b388;
+}
+
+#switchstyle:hover rect {
+    fill: #00b388;
+}
+
 /*
 +++++++++++++++++++++
 Side Navigation
@@ -146,8 +179,23 @@ Side Navigation
     color: #000;
 }
 
+#menu, .mm-menu .mm-navbar > *, 
+.mm-menu .mm-navbar a, 
+.mm-menu .mm-listview > li .mm-next:after,
+.mm-menu .mm-listview > li .mm-arrow:after,
+.mm-menu .mm-navbar .mm-btn:before,
+.mm-menu .mm-navbar .mm-btn:after,
+.mm-listview > li,
+.mm-listview > li:after,
+.mm-listview > li .mm-next,
+.mm-listview > li .mm-next:before {
+    color: #000;
+    border-color: #9E9E9E;
+}
+
 .mm-listview > li:not(.mm-divider):after {
     left: 0;
+    border-color: #9E9E9E;
 }
 
 #menu li a:hover {
@@ -163,13 +211,17 @@ Side Navigation
 /*the following creates the hamburger menu icon*/
 #trigger {
 	display: block;
-    width: 30px;
+    width: 90px;
 	height: 25px;
 	
 	background-color: transparent;
     float: right;
     z-index: 100;
     margin: 1% 2%;
+}
+
+#trigger a {
+    display: inline-block;
 }
 
 #menutrigger {
@@ -361,7 +413,7 @@ Course Contents
 }
 
 .button-group button:hover {
-    background-color: #000;
+    background-color: #616161;
     color: #fff;
 }
 
@@ -652,7 +704,7 @@ Quiz
 }
 
 #quizform h2 {
-	color: #003366;
+	color: #00b388;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 2.5em;
@@ -742,8 +794,12 @@ code {
     color: #fff;
 }
 
+#submitquiz {
+    background-color: #00b388;
+}
+
 #submitquiz:hover, #startquiz:hover {
-    background:#000;
+    background:#616161;
 }
 
 #submitquiz span, #startquiz span {
