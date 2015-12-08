@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+    ************************************
+    COMP 1950 PROJECT
+
+    Author: Joanna Flores (#A00733856)
+    Last Updated: 2015-Dec-05
+    ************************************
+    -->
+    
+    <!--
+    ************************************
+    Page title and description
+    ************************************
+    -->
+	<title>COMP 1950 - Course Tools</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+	<meta charset="utf-8" />
+    <meta name="description" content="This provides a list of resources that can help you throughout COMP 1950." />
+    
+    <!--
+    ************************************
+    CSS files
+    ************************************
+    -->
+    
+    <!-- style reset -->
+    <link type="text/css" href="/comp1950/css/normalize.css" rel="stylesheet" />
+    
+    <!-- css file needed for implementing the default style of the side navigation -->
+    <link href="/comp1950/css/jquery.mmenu.css" type="text/css" rel="stylesheet" />
+    
+    <!-- for implementing page transitions -->
+    <link type="text/css" href="/comp1950/css/animsition.min.css" rel="stylesheet" />
+    
+    <!-- for fonts  -->
+    <link type="text/css" href="/comp1950/css/fonts.css" rel="stylesheet" />
+    
+    <!-- for positioning  -->
+    <link type="text/css" href="/comp1950/css/positioning.css" rel="stylesheet"  title="Black on White" />
+    
+    <!-- for alternative colours  -->
+    <link type="text/css" href="/comp1950/css/positioning_invertcolors.css" rel="alternate stylesheet" title="White on Black" />
+    
+    <!--
+    ************************************
+    Javascipt files
+    ************************************
+    -->
+    <!-- for implementing jQuery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+    <!-- script files needed for implementing a side navigation -->
+    <script type="text/javascript" src="/comp1950/js/jquery.mmenu.min.js"></script>
+    <script type="text/javascript" src="/comp1950/js/sidebar.js"></script>
+    
+    <!-- for implementing page transitions -->
+    <script type="text/javascript" src="/comp1950/js/animsition.min.js"></script>
+    <script type="text/javascript" src="/comp1950/js/pagetransition.js"></script>
+    
+    <!-- for the navboxes in the main page and resources -->
+    <script type="text/javascript" src="/comp1950/js/isotope.pkgd.js"></script>
+    <script type="text/javascript" src="/comp1950/js/navboxes.js"></script>
+    
+    <!-- for switching styles -->
+    <script type="text/javascript" src="/comp1950/js/styleswitcher.js"></script>
+    
+    <!-- HTML5 Shiv for IE earlier than version 9 -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+    <div  class="animsition"
+          data-animsition-in-class="fade-in"
+          data-animsition-in-duration="1000"
+          data-animsition-out-class="fade-out"
+          data-animsition-out-duration="800">
+    <!--#include virtual="/comp1950/includes/sidenav.html" -->
+    
+    <div id="outerwrapper">
+        <!--#include virtual="/comp1950/includes/header.html" -->
+        
+        <!--
+        ************************************
+        Main Page Content
+        ************************************
+        -->
+        <main>
+            <div class="splashpage">
+                <div id="colourOverlay">
+                    <!-- splash page -->
+                    <h1>British Columbia Institute of Technology</h1>
+                    <section>
+                        <h2><span>COMP 1950</span> Tools and Resources</h2>
+                        <p>The following provides a list of validators, web browsers, diagnostic tools, text editors, FTP client utilities, and textbooks that can help you throughout the course.</p>
+                    </section>
+				</div>
+            </div>
+            
+            <section>
+                <!-- course contents -->
+                <h2>Recommended Resources</h2>
+                <div class="button-group resourceoptions">
+                    <button class="button is-checked" data-filter="*">all</button>
+                    <button class="button" data-filter=".validators">validators</button>
+                    <button class="button" data-filter=".browsers">browsers</button>
+                    <button class="button" data-filter=".tools">tools</button>
+                    <button class="button" data-filter=".textbooks">textbooks</button>
+                </div>
+                
+                <!-- Validators -->
+                <section class="resourcecategory" data-category="validators">
+                    <h3>Validators</h3>
+                    <ul class="grid">
+                        <li class="element-item validators" data-category="validators">
+                            <a href="http://validator.w3.org/">
+                                <img src="/comp1950/images/w3cicon.jpg" alt="W3C" />
+                                <p>HTML validator</p>
+                            </a>
+                        </li>
+                        <li class="element-item validators" data-category="validators">
+                            <a href="http://jigsaw.w3.org/css-validator/">
+                                <img src="/comp1950/images/w3cicon.jpg" alt="W3C" />
+                                <p>CSS validator</p>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                
+                <!-- Web Browsers -->    
+                <section class="resourcecategory" data-category="browsers">
+                    <h3>Web Browsers</h3>
+                    <ul class="grid">
+                        <li class="element-item browsers" data-category="browsers">
+                            <a href="http://windows.microsoft.com/en-CA/internet-explorer/products/ie/home">
+                                <img src="/comp1950/images/ieicon.png" alt="Internet Explorer" />
+                                <p>Internet Explorer</p>
+                            </a>
+                        </li>
+                        <li class="element-item browsers" data-category="browsers">
+                            <a href="http://www.mozilla.com/en-US/firefox/new/">
+                                <img src="/comp1950/images/firefoxicon.png" alt="Mozilla Firefox" />
+                                <p>Mozilla Firefox</p>
+                            </a>
+                        </li>
+                        <li class="element-item browsers" data-category="browsers">
+                            <a href="http://www.apple.com/safari/">
+                                <img src="/comp1950/images/safariicon.png" alt="Safari" />
+                                <p>Safari</p>
+                            </a>
+                        </li>
+                        <li class="element-item browsers" data-category="browsers">
+                            <a href="http://www.opera.com/">
+                                <img src="/comp1950/images/operaicon.png" alt="Opera" />
+                                <p>Opera</p>
+                            </a>
+                        </li>
+                        <li class="element-item browsers" data-category="browsers">
+                            <a href="http://www.google.com/chrome/">
+                                <img src="/comp1950/images/chromeicon.png" alt="Chrome" />
+                                <p>Chrome</p>
+                            </a>
+                        </li>
+                        <li class="element-item browsers" data-category="browsers">
+                            <a href="http://www.webbie.org.uk/">
+                                <img src="/comp1950/images/webbieicon.png" alt="Webbie" />
+                                <p>Webbie</p>
+                            </a>
+                        </li>
+                        <li class="element-item browsers" data-category="browsers">
+                            <a href="http://webbrowseremulator.com/">
+                                <img src="/comp1950/images/browseremulator.png" alt="Browser Emulator" />
+                                <p>Web Browser Emulator</p>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                
+                <!-- Browser-based Diagnostic Tools -->
+                <section class="resourcecategory" data-category="tools">
+                    <h3>Browser-Based Diagnostic Tools</h3>
+                    <ul class="grid">
+                        <li class="element-item tools" data-category="tools">
+                            <a href="http://www.getfirebug.com/" title="Get Firebug!">
+                                <img src="/comp1950/images/firefoxicon.png" alt="Mozilla Firefox" />
+                                <p>Firefox Firebug</p>
+                            </a>
+                        </li>
+                        <li class="element-item tools" data-category="tools">
+                            <a href="https://developers.google.com/chrome-developer-tools/">
+                                <img src="/comp1950/images/chromeicon.png" alt="Chrome" />
+                                <p>Chrome</p>
+                            </a>
+                        </li>
+                        <li class="element-item tools" data-category="tools">
+                            <a href="https://developer.apple.com/safari/tools/">
+                                <img src="/comp1950/images/safariicon.png" alt="Safari" />
+                                <p>Safari</p>
+                            </a>
+                        </li>
+                        <li class="element-item tools" data-category="tools">
+                            <a href="http://msdn.microsoft.com/en-ca/library/gg589507(v=vs.85).aspx">
+                                <img src="/comp1950/images/ieicon.png" alt="Internet Explorer" />
+                                <p>Internet Explorer</p>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                
+                <!-- Text Editors -->
+                <section class="resourcecategory" data-category="tools">
+                    <h3>HTML Text Editors</h3>
+                    <section>
+                        <!-- Text Editors: Windows -->
+                        <h4>Windows</h4>
+                        <ul class="grid">
+                            <li class="element-item tools" data-category="tools">
+                                <a href="http://www.htmlkit.com/download/#download-html-kit-292">
+                                    <img src="/comp1950/images/htmlkiticon.png" alt="HTML Kit" />
+                                    <p>HTML Kit</p>
+                                </a>
+                            </li>
+                            <li class="element-item tools" data-category="tools">
+                                <a href="http://www.editplus.com/download.html">
+                                    <img src="/comp1950/images/editplusicon.png" alt="EditPlus" />
+                                    <p>EditPlus</p>
+                                </a>
+                            </li>
+                            <li class="element-item tools" data-category="tools">
+                                <a href="http://notepad-plus-plus.org/">
+                                    <img src="/comp1950/images/notepadplusicon.png" alt="Notepad++" />
+                                    <p>Notepad++</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <!-- Text Editors: Macintosh -->
+                        <h4>Macintosh</h4>
+                        <ul class="grid">
+                            <li class="element-item tools" data-category="tools">
+                                <a href="http://www.barebones.com/products/textwrangler/">
+                                    <img src="/comp1950/images/textwranglericon.png" alt="TextWrangler" />
+                                    <p>TextWrangler</p>
+                                </a>
+                            </li>
+                            <li class="element-item tools" data-category="tools">
+                                <a href="http://macromates.com/">
+                                    <img src="/comp1950/images/textmateicon.png" alt="Textmate" />
+                                    <p>Textmate</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+                
+                <section class="resourcecategory"  data-category="tools">
+                    <h3>FTP Client Utilities</h3>
+                    <section>
+                        <!-- FTP Client Utilities: Windows -->
+                        <h4>Windows</h4>
+                        <ul class="grid">
+                            <li class="element-item tools" data-category="tools">
+                                <a href="http://filezilla-project.org/download.php">
+                                    <img src="/comp1950/images/filezillaicon.png" alt="Filezilla" />
+                                    <p>Filezilla</p>
+                                </a>
+                            </li>
+                            <li class="element-item tools" data-category="tools">
+                                <a href="http://www.download.com/Core-FTP-LE/3000-2160_4-10195752.html">
+                                    <img src="/comp1950/images/coreftpicon.png" alt="Core FTP" />
+                                    <p>Core FTP Lite</p>
+                                </a>
+                            </li>
+                            <li class="element-item tools" data-category="tools">
+                                <a href="http://www.download.com/FTP/3150-2160_4-0.html?tag=nav_dir">
+                                    <img src="/comp1950/images/ftpclienticon.png" alt="FTP Utilities" />
+                                    <p>FTP utilities</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <!-- FTP Client Utilities: Macintosh -->
+                        <h4>Macintosh</h4>
+                        <ul class="grid">
+                            <li class="element-item tools" data-category="tools">
+                                <a href="http://filezilla-project.org/download.php">
+                                    <img src="/comp1950/images/filezillaicon.png" alt="Filezilla" />
+                                    <p>Filezilla</p>
+                                </a>
+                            </li>
+                            <li class="element-item tools" data-category="tools">
+                                <a href="http://fetchsoftworks.com/">
+                                    <img src="/comp1950/images/fetchicon.png" alt="Fetch" />
+                                    <p>Fetch</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+                
+                <section class="resourcecategory"  data-category="textbooks">
+                    <h3>Textbooks</h3>
+                    <p>There is no official textbook for comp1950, but if you wish to supplement the online course notes and examples you may find the following optional texts useful:</p>
+                    <ul class="grid">
+                        <li class="element-item textbooks" data-category="textbooks">
+                            <a href="http://www.pearsonhighered.com/educator/product/Web-Development-and-Design-Foundations-with-HTML5-7E/9780133571783.page">
+                                <img src="http://bcitcomp.ca/1950/resources/web_dev_text.jpg" alt="CSS3 for web designers" />
+                                <p><strong>Web Development and Design Foundations with HTML5, 7/Edition</strong></p>
+                                <p>By Terry Felke-Morris</p>
+                                <p>ISBN: <code>978-0-1335717-8-3</code></p>
+                            </a>
+                        </li>
+                        <li class="element-item textbooks" data-category="textbooks">
+                            <a href="http://www.abookapart.com/products/html5-for-web-designers">
+                                <img src="http://bcitcomp.ca/1950/resources/aba-html.png" alt="HTML5 for web designers" />
+                                <p><strong>HTML5 for web designers</strong></p>
+                                <p>By Jeremy Keith</p>
+                                <p>ISBN: <code>978-0-9844425-0-8</code></p>
+                            </a>
+                        </li>
+                        <li class="element-item textbooks" data-category="textbooks">
+                            <a href="http://www.abookapart.com/products/css3-for-web-designers">
+                                <img src="http://bcitcomp.ca/1950/resources/aba-css.png" alt="CSS3 for web designers" />
+                                <p><strong>CSS3 for web designers</strong></p>
+                                <p>By Dan Cederholm</p>
+                                <p>ISBN: <code>978-0-9844425-2-2</code></p>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </main>
+
+        <!--
+        ************************************
+        Footer
+        ************************************
+        -->
+        <footer>
+        </footer>
+        
+    </div>    
+    </div>
+</body>
+</html>

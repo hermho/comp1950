@@ -1,11 +1,12 @@
-
 /*
 -------------------------------------
 COMP 1950 PROJECT
 
-Author: Joanna Flores (#A00733856)
-Last Updated: 2015-Dec-05
-Modified: Herman Ho (#A00954161)
+Last Updated: 2015-Dec-06
+
+Authors: 
+Joanna Flores (#A00733856) - added the initial positioning of the elements
+Herman Ho - added the styling
 -------------------------------------
 */
 
@@ -21,6 +22,7 @@ BCIT Blue: #003366
 
 body {
 	font-family: centuryGothic;
+    font-size:16px;
 }
 /*
 +++++++++++++++++++++
@@ -36,37 +38,123 @@ header {
     z-index: 100;
     
     color: #fff;
+    background: transparent;
 }
 
-#topnav {
-    line-height: 50px;
-    height: 50px;
+/*styles for the timer*/
+#countdown {
+    width: 150px;
     
-    padding: 5px 2%;
-	display: none;
-}
-
-/*top navigation*/
-#topnav ul {
-    display: block;
-    padding: 0;
-    margin: 0;
-}
-
-#topnav ul {
-    float: right;
-    width: 25%;
-}
-
-#topnav ul li {
-    float: right;
-    text-align: right;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
     
-    display: inline-block;
-    line-height: 50px;
-    padding: 0 2%;
-    margin: 0;
-    list-style: none;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+
+.upperhalf {
+    background-color: #000;
+    border: 2px solid #000;
+}
+
+.lowerhalf {
+    background-color: #b71c1c;
+    border: 2px solid #b71c1c;
+    
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
+}
+
+/*top menu icons*/
+.topmenu {
+    position: fixed;
+    top: 1.75%;
+    padding-left: 1.25%;
+    z-index: 100;
+}
+
+svg.icon {
+    background-color: #fff;
+    
+    -webkit-border-radius: 90%;
+    -moz-border-radius: 90%;
+    border-radius:90%;
+    
+	width: 40px;
+	height: 40px;
+    margin: 1% 1px;
+    
+    cursor: pointer;
+}
+
+svg.icon:hover, svg.icon:hover path {
+    background-color: #000;
+    fill: #000;
+}
+
+svg.icon:hover path:last-child {
+    fill: #fff;
+}
+
+#exercise, 
+#lecture,
+#switchstyle {
+    width: 40px;
+    height: 40px;
+    
+    -webkit-border-radius: 23%;
+    -moz-border-radius: 23%;
+    border-radius: 23%;
+    
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#lecture, #lecture path {
+    background-color: #003366;
+    fill: #fff;
+}
+
+#exercise, #exercise path {
+    background-color: #00b388;
+    fill: #fff;
+}
+
+#lecture:hover, #lecture:hover path,
+#exercise:hover, #exercise:hover path {
+    background-color: #000;
+    fill: #fff;
+}
+
+#switchstyle {
+    -webkit-border-radius: 90%;
+    -moz-border-radius: 90%;
+    border-radius: 90%;
+    
+    border: 3px solid #000;
+    padding: 7px;
+}
+
+#switchstyle, #switchstyle path {
+    background-color: #fff;
+    fill: #000;
+}
+
+#switchstyle rect {
+    fill: #fff;
+}
+
+#switchstyle:hover, #switchstyle:hover path {
+    background-color: #000;
+    fill: #fff;
+}
+
+#switchstyle:hover rect {
+    fill: #000;
 }
 
 /*
@@ -75,50 +163,81 @@ Side Navigation
 +++++++++++++++++++++
 */
 
-.mm-menu.mm-offcanvas {
-    top: 60px;
+/*customizes the default style of the side navigation*/
+#menu {
+    height: 100%;
+    background-color: #003366;
+    color: #fff;
+}
+
+#menu, .mm-menu .mm-navbar > *, 
+.mm-menu .mm-navbar a, 
+.mm-menu .mm-listview > li .mm-next:after,
+.mm-menu .mm-listview > li .mm-arrow:after,
+.mm-menu .mm-navbar .mm-btn:before,
+.mm-menu .mm-navbar .mm-btn:after,
+.mm-listview > li,
+.mm-listview > li:after,
+.mm-listview > li .mm-next,
+.mm-listview > li .mm-next:before {
+    color: #fff;
+    border-color: #B0BEC5;
+}
+
+.mm-listview > li:not(.mm-divider):after {
+    left: 0;
+    border-color: #B0BEC5;
+}
+
+#menu li a:hover {
+    background-color: #00b388;
+    color: #fff;
+}
+
+.mm-menu .mm-navbar a.mm-title {
+    color: #EEEEEE;
 }
 
 /*the following creates the hamburger menu icon*/
 #trigger {
 	display: block;
-    width: 25px;
-	height: 50px;
+    width: 90px;
+	height: 25px;
 	
 	background-color: transparent;
-    float: left;
-    padding: 25px 15px;
+    float: right;
     z-index: 100;
+    margin: 1% 2%;
 }
 
-#trigger span, 
-#trigger span:before,
-#trigger span:after {
-	cursor: pointer;
-	height: 5px;
-	width: 30px;
-    
-    -moz-border-radius: 1px;
-    -webkit-border: 1px;
-    border-radius: 1px;
-    
-	background: #fff;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow:    0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-    box-shadow:         0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-    
-	position: absolute;
-	display: block;
-	content: '';
+#trigger a {
+    display: inline-block;
 }
 
-#trigger span:before {
-	top: -10px;
+#menutrigger {
+    width: 40px;
+    height: 40px;
+    
+    border: 3px solid #000;
+    
+    -webkit-border-radius: 90%;
+    -moz-border-radius: 90%;
+    border-radius: 90%;
+    
+    padding: 7px;
+    box-sizing: border-box;
 }
 
-#trigger span:after {
-	bottom: -10px; 
+#menutrigger, #menutrigger path {
+    background-color: #fff;
+    fill: #000;
 }
+
+#menutrigger:hover, #menutrigger:hover path {
+    background-color: #000;
+    fill: #fff;
+}
+
 
 /*
 +++++++++++++++++++++
@@ -146,6 +265,11 @@ main {
     padding: 0 0 5% 0;
     text-align: center;
 }
+
+.scroller {
+    padding: 0 5% 3%;
+}
+
 .splashpage, main h1, main h2, .navbox {
     text-align: center;
 }
@@ -157,20 +281,30 @@ main {
 	background-position:center center;	
 	overflow: hidden;
 	position: relative;
+    
+    padding: 0;
+    margin: 0;
 }
+<<<<<<< HEAD
 .splashpage section, .splashpage2 section, .splashpage3 section {
 	position: absolute;
 	top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+=======
+.splashpage section {
+    position: relative;
+    z-index: 50;
+>>>>>>> origin/master
 	color: #fff;
-	z-index: 50;
 	text-shadow: 5px 5px 10px #000;
 }
 .splashpage h1, .splashpage2 h1, .splashpage3 h1 {
 	text-transform: lowercase;
 	font-size: 1em;
 	letter-spacing: 1.1px;
+    color: #fff;
+    text-shadow: 5px 5px 10px #000;
 }
 .splashpage h2, .splashpage2 h2, .splashpage3 h2 {
 	text-transform: uppercase;
@@ -190,18 +324,25 @@ main {
 	font-weight: bold;
 	letter-spacing: 1.1px;
 }
+.splashpage em {
+    text-decoration: underline;
+}
 #colourOverlay {
-	height: 100vh;
-	width: 100vw;
+	height: 100%;
+	width: 100%;
+    padding-top: 15%;
 	
 	background: -webkit-linear-gradient(155deg, #003366, #00b388, #c4d600);
     background: -o-linear-gradient(155deg, #003366, #00b388, #c4d600);
     background: -moz-linear-gradient(155deg, #003366, #00b388, #c4d600);
     background: linear-gradient(155deg, #003366, #00b388, #c4d600);
+    
+    background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center center;	
 	
 	overflow: hidden;
-	opacity: 0.5;
-	position: relative;
+	opacity: 0.7;
 }
 
 /*
@@ -220,8 +361,15 @@ Course Contents
 	font-size: 2.5em;
 }	
 
-#coursecontents p {
+#coursecontents p, 
+#coursecontents ul {
 	padding: 0 15%;
+    text-align: justify;
+}
+
+#coursecontents ul li {
+	margin: 0 5%;
+    text-align: justify;
 }
 
 /*navigation boxes found in the main page and resources*/
@@ -239,16 +387,28 @@ Course Contents
     display: inline-block;
     margin: 0 1%;
     width: 16%;
-	background-color: #00b388;
-	padding: .5% 0;
+    background-color: #00b388;
+    padding: .5% 0;
 	border:none;
+    
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
 	border-radius: 25px;
+    
+    border: none;
+    outline:none;
 }
+
 .button-group .button.is-checked {
 	background-color: #003366;
 }
 
+.button-group button:hover {
+    background-color: #000;
+    color: #fff;
+}
 
+/*grid links*/
 .grid {
     width: 85%;
     margin: 0 auto;
@@ -259,31 +419,80 @@ Course Contents
     float: left;
     display: block;
     width: 200px;
-    
+    min-height: 200px;
     margin: 5px;
-    padding: 6% 0;
-	
 }
+<<<<<<< HEAD
 .element-item:hover {
 	opacity: 0.8;
 }
 .lectures {
-	background-color: #003366;
-}
-.exercises {
-	background-color: #00b388;
-}
-.homeworks {
-	background-color: #c4d600;
-}
-.project {
-	background-color: #c4d600;
-}
-.element-item a{
-	color: #fff;
+=======
+
+.element-item a:link, 
+.element-item a:visited {
+    color: #fff;
 	text-decoration: none;
+    
+    display: block;
+    padding-top: 30%;
 }
 
+.lectures, 
+.validators,
+.element-item.lectures a:link,
+.element-item.validators a:link {
+>>>>>>> origin/master
+	background-color: #003366;
+}
+
+.exercises,
+.browsers,
+.element-item.exercises a:link, 
+.element-item.browsers a:link {
+	background-color: #00b388;
+}
+
+.homeworks,
+.project, 
+.tools,
+.element-item.project a:link,
+.element-item.homeworks a:link, 
+.element-item.tools a:link {
+	background-color: #c4d600;
+}
+
+.textbooks,
+.element-item.textbooks a:link {
+    background-color: #616161;
+    min-height: 400px;
+}
+
+.element-item.validators a,
+.element-item.browsers a,
+.element-item.tools a,
+.element-item.textbooks a {
+    padding-top: 0;
+}
+
+.validators a img,
+.browsers a img,
+.tools a img,
+.textbooks a img {
+    padding: 50px 0px 0px;
+}
+
+.element-item.browsers img, 
+.element-item.tools img {
+    height: 50px;
+}
+
+.resourcecategory {
+    width: 80%;
+    margin: 0 auto;
+}
+
+<<<<<<< HEAD
 .texts {
 	background-color: #003366;
     background-size:cover;
@@ -357,6 +566,8 @@ Course Contents
 	background-image:url("/comp1950/images/tools3.jpg");
 }
 
+=======
+>>>>>>> origin/master
 
 /*
 +++++++++++++++++++++
@@ -375,48 +586,46 @@ Week 06 Lecture
 }
 
 /*lecture agenda*/
-.lectureagenda{
-	position: absolute;
-	top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.agenda {
+    position: relative;
+    z-index:50;
 	color: #fff;
-	z-index: 50;
-	padding-top: 30%;
 }
-.lectureagenda h2{
+
+.agenda h2 {
 	font-family: folkster;
 	text-transform: lowercase;
 	font-size: 2em;
 	font-weight: normal;
 	padding-top: 10px;
 }
-.lectureagenda ul {
+.agenda ul {
 	list-style: none;
 	padding-left: 0;
 }
-.lectureagenda li {
+.agenda li {
 	font-weight: bold;
 	font-size: 0.9em;
 }
-.lectureagenda a {
+.agenda a {
 	text-decoration: none;
 	color: #fff;
 }
-.lectureagenda a:hover {
+.agenda a:hover {
 	color: #003366;
 }
 
-
 /*lecture section*/
 .lecturesection {
-	padding: 5% 15%;
+	padding: 1.5% 15%;
 }
 .lecturesection h2 {
 	color: #003366;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 2.5em;
+    margin: 1.5% 0;
+    padding: 0;
 }	
 .lecturesection a {
 	text-decoration: none;
@@ -429,17 +638,20 @@ Week 06 Lecture
 
 .lecturesection p {
 	text-align: left;
+    margin: 0.5% 0;
 }
 .lecturesection h3 {
 	text-align: left;
 	color: #003366;
+    margin: 1% 0;
+    padding: 0;
 }
 .lecturesection ul, .lecturesection li {
 	list-style: circle;
 	text-align: left;
 }
 .lecturesection strong {
-	color: #003366
+	color: #003366;
 }
 .lecturesection pre {
 	text-align: left;
@@ -447,13 +659,15 @@ Week 06 Lecture
 
 /*lecture summary*/
 .lecturesummary {
-	padding: 5% 15%;
+	padding: 10% 15%;
 }
 .lecturesummary h2 {
 	color: #003366;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 2.5em;
+    margin: 0;
+    padding: 0;
 }	
 .lecturesummary p {
 	text-align: left;
@@ -470,6 +684,15 @@ Week 06 Lecture
 .lecturesummary a:hover {
 	color: #003366;
 }
+.lecturesummary div {
+    border: 2px solid #C0C0C0;
+    
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    
+    padding: 5%;
+}
 
 /*
 +++++++++++++++++++++
@@ -479,7 +702,7 @@ Week 06 Exercise
 
 /*exercise section*/
 .exercisessubpage {
-	padding: 5% 15%;
+	padding: 1% 15%;
 }
 .exercisessubpage h2 {
 	color: #003366;
@@ -508,9 +731,10 @@ Week 06 Exercise
 	text-align: left;
 }
 .exercisessubpage strong {
-	color: #003366
+	color: #003366;
 }
 
+<<<<<<< HEAD
 /*
 +++++++++++++++++++++
 Week 05 Quiz
@@ -528,7 +752,66 @@ Week 05 Quiz
 }
 .quiz > p {
     text-align: left;
+=======
+/*week06 exercise 2*/
+#transition_image {
+    position: relative;
+    margin-right: 30px;
+    float: left;
 }
+
+#transition_image img {
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+
+#image_top {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#transition_image + section {
+    clear: both;
+}
+
+/*
++++++++++++++++++++++
+Quiz
++++++++++++++++++++++
+*/
+.quizpage {
+    padding: 0;
+}
+
+.quizpage #colourOverlay {
+    padding-top: 5%;
+}
+
+.quizpage > p {
+    text-align: center;
+>>>>>>> origin/master
+}
+
+#quizform {
+    padding: 5% 15% 2%;
+}
+
+#quizform h2 {
+	color: #003366;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 2.5em;
+    margin: 0;
+    padding: 0;
+}	
+
+.quizpage fieldset {
+    text-align: justify;
+    border: none;
+}
+
 .studentinfo, .quizsection {
     box-sizing: border-box;
     width: 70%;
@@ -560,15 +843,8 @@ Week 05 Quiz
 	width: 95%;
 }
 
-.hidequiz {
-    display: none;
-}
-
-.showquiz {
-    display: block;
-}
-
 .studentinfo {
+<<<<<<< HEAD
     border-top: 2px solid #00b388;
     border-bottom: 2px solid #00b388;
     width: 60%;
@@ -577,22 +853,66 @@ Week 05 Quiz
 .quiz textarea, .quiz input[type="text"] {
     display: block;
     width: 100%;
+=======
+    border: 3px solid #000;
+    width: 70%;
+    
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    
+    margin-bottom: 1%;
+>>>>>>> origin/master
 }
 
 textarea {
     resize: none;
-    padding: 0;
 }
 
-fieldset {
-    border: none;
+code {
+    font-weight: bold;
 }
 
-#submitquiz {
+.quizpage textarea, .quizpage input[type="text"] {
+    display: block;
+    width: 95%;
+    outline:none;
+    border: solid 2px #616161;
+    background-color: #ECEFF1;
+    padding: 3px 5px;
+    margin: 0 auto;
+    
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    
+    color: #000;
+}
+
+.quizpage input[type="text"]:focus,
+.quizpage input[type="text"].focus,
+.quizpage textArea:focus,
+.quizpage textArea.focus {
+    border: solid 2px #2c3e50;
+    background-color: #B0BEC5;
+    
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+#submitquiz, #startquiz {
     display: block;
 	color: #fff;
 	font-weight: bold;
     width: 150px;
+<<<<<<< HEAD
     margin: 1% auto;
 	background-color: #00b388;
 	border:none;
@@ -601,10 +921,42 @@ fieldset {
 }
 #submitquiz:hover {
 	background-color: #003366;
+=======
+    margin: 0 auto 2%;
+    background-color: #003366;
+    padding: .5% 0;
+    
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+	border-radius: 25px;
+    
+    border: none;
+    outline:none;
+    
+    color: #fff;
+}
+
+#submitquiz:hover, #startquiz:hover {
+    background:#000;
+}
+
+#submitquiz span, #startquiz span {
+    font-family: centuryGothic;
+    font-size: 1em;
+>>>>>>> origin/master
 }
 
 #countdown {
     position: fixed;
     top: 20px;
     left: 70px;
+}
+
+/*for hiding and showing sections*/
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
 }

@@ -1,34 +1,32 @@
-<!--
---------------------------------
-COMP 1950 PROJECT
-
-Authors:
-
-(1) Joanna Flores (#A00733856)
-- Prepared the page skeleton
-
-(2) Herman Ho
-<Place a brief description of what you implemented here>
---------------------------------
--->
-
 <!DOCTYPE html>
 <html>
 <head>
     <!--
-    --------------------------------
-    Page title and description
-    --------------------------------
+    ************************************
+    COMP 1950 PROJECT
+
+    Last Updated: 2015-Dec-05
+    Authors:
+
+    (1) Joanna Flores - prepared the page skeleton
+    (2) Herman Ho - added the styling
+    ************************************
     -->
-	<title>COMP 1950 - Week 06 CSS Techniques Exercises</title>
-    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-	<meta charset="utf-8" />
-    <meta name="description" content="page description here" />
     
     <!--
-    --------------------------------
+    ************************************
+    Page title and description
+    ************************************
+    -->
+	<title>COMP 1950 - Week 06 CSS3 Techniques Exercises</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+	<meta charset="utf-8" />
+    <meta name="description" content="This provides exercises that supplements the new CSS3 features discussed in COMP1950 lecture six" />
+    
+    <!--
+    ************************************
     CSS files
-    --------------------------------
+    ************************************
     -->
     
     <!-- style reset -->
@@ -37,31 +35,42 @@ Authors:
     <!-- css file needed for implementing the default style of the side navigation -->
     <link href="/comp1950/css/jquery.mmenu.css" type="text/css" rel="stylesheet" />
     
+    <!-- for implementing page transitions -->
+    <link type="text/css" href="/comp1950/css/animsition.min.css" rel="stylesheet" />
+    
     <!-- for fonts  -->
     <link type="text/css" href="/comp1950/css/fonts.css" rel="stylesheet" />
-	
+    
     <!-- for positioning  -->
-    <link type="text/css" href="/comp1950/css/positioning.css" rel="stylesheet" title="Black On White"/>
-	
+    <link type="text/css" href="/comp1950/css/positioning.css" rel="stylesheet"  title="Black on White" />
+    
     <!-- for alternative colours  -->
-    <link type="text/css" href="/comp1950/css/positioning_invertcolors.css" rel="alternate stylesheet" title="White On Black"/>
+    <link type="text/css" href="/comp1950/css/positioning_invertcolors.css" rel="alternate stylesheet" title="White on Black" />
     
     <!--
-    --------------------------------
+    ************************************
     Javascipt files
-    --------------------------------
+    ************************************
     -->
     <!-- for implementing jQuery -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     
     <!-- script files needed for implementing a side navigation -->
     <script type="text/javascript" src="/comp1950/js/jquery.mmenu.min.js"></script>
+    <script type="text/javascript" src="/comp1950/js/sidebar.js"></script>
     
-    <!-- for the navboxes in the main page and resources -->
-    <script type="text/javascript" src="/comp1950/js/isotope.pkgd.js"></script>
+    <!-- for implementing page transitions -->
+    <script type="text/javascript" src="/comp1950/js/animsition.min.js"></script>
+    <script type="text/javascript" src="/comp1950/js/pagetransition.js"></script>
     
-    <!-- for positioning -->
-    <script type="text/javascript" src="/comp1950/js/positioning.js"></script>
+    <!-- for implementing scrolling effects -->
+    <script type="text/javascript" src="/comp1950/js/jquery.scrollify.min.js"></script>
+    <script type="text/javascript" src="/comp1950/js/sectionscroll.js"></script>
+
+    <!-- for switching styles -->
+    <script type="text/javascript" src="/comp1950/js/styleswitcher.js"></script>
     
     <!-- HTML5 Shiv for IE earlier than version 9 -->
 	<!--[if lt IE 9]>
@@ -69,15 +78,23 @@ Authors:
 	<![endif]-->
 </head>
 <body>
-    <!--#include virtual="/comp1950/includes/headernav.html" -->
+    <div  class="animsition"
+          data-animsition-in-class="fade-in"
+          data-animsition-in-duration="1000"
+          data-animsition-out-class="fade-out"
+          data-animsition-out-duration="800">
+    <!--#include virtual="/comp1950/includes/sidenav.html" -->
     
     <div id="outerwrapper">
+        <!--#include virtual="/comp1950/includes/header.html" -->
+        <!--#include virtual="/comp1950/includes/topnav.html" -->
         
         <!--
-        --------------------------------
+        ************************************
         Main Page Content
-        --------------------------------
+        ************************************
         -->
+<<<<<<< HEAD
         <main class="exercisespage">
 		
             <section class="splashpage2">
@@ -103,68 +120,92 @@ Authors:
                     <p>CSS3, a better box model</p>
                 </div>
             </section>
+=======
+        <main id="container" class="exercisespage">
+            <!-- splash page -->
+            <div class="scroller splashpage" data-section-name="wk06ex00">
+                <div id="colourOverlay">
+                    <h1>comp 1950 | intermediate web design & development</h1>
+                    <section>
+                        <h2><span>Week 6 Exercise - </span>CSS3</h2>
+                        <p>CSS3 provides greater control over the 'experience layer' of a user's interaction with a web page.</p>
+                    </section>
+				</div>
+            </div>
+>>>>>>> origin/master
             
-            <!-- Exercise #2 -- CSS3 Transitions Exercise -->
-            <section class="exercisessubpage">
-                <h2>Exercise 2: CSS3 Transitions Exercise</h2>
-                <p><a href="http://bcitcomp.ca/comp1950/downloads/transitions_exercise.zip">Download the transitions exercise starting files.</a></p>
-
-                <div id="transition_image">
-                    <img src="http://bcitcomp.ca/1950/lectures/six/images/button_green.png" id="image_bottom" alt="yellow button" width="100px" height="100px">	
-                    <img src="http://bcitcomp.ca/1950/lectures/six/images/button_yellow.png" id="image_top" alt="yellow button" width="100px" height="100px">
-                </div>
-                
+            <div class="scroller exercisessubpage" data-section-name="wk06ex01">
+                <!-- Exercise #1 - CSS3 Box Model -->
                 <section>
-                    <h3>Challenge A:</h3>
-                    <p>The yellow button image is absolutely positioned so that it overlaps a green button image beneath it.</p>	<ul>
-                        <li>First add a :hover pseudoclass to the <code>id="image_top"</code> that will set it's <code>opacity</code> to 0;</li>
-                        <li>Then add the transition states: First apply a transition to the opacity of <code>#image_top</code>. Note how the transtion is applied to both the :hover and non-hover states.</li>
-                        <li>Relocate the transition code from <code>#image_top</code> to <code>#image_top:hover</code>. Note how the transtion is applied to only the change from non-hover to :hover.</li>
-                        <li>For full control over this behavior, define transition code in both the before (#image_top) and after (#image_top:hover) rules.</li>
-
-                        <li>Follow the pattern:<br>
-                        <code>-vendorprefix-transition:property duration timing-function;</code></li>
-                        <li>use the notes below to guide to on the syntax</li>
-                        <li>demonstrate the finished transition to your instructor</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h3>Challenge B:</h3>
-                    <p>Add transtion code that will alter the width or the height of the form inputs when they are in the 	<code>focus</code> state.</p>
+                    <h2>Exercise 1: CSS3 Box Model</h2>
                     <ul>
-                        <li>transition either the width or the height. note how you will need to set the width in CSS for both the :focus and not :focused states.</li>
-                        <li>try transitioning several CSS properties (<code>width</code>, <code>height</code> and <code>border</code>) at once by using <code>all</code> as the assigned transitional property, eg: <code>transition:all 1s ease;</code></li>
-
+                        <li>Experiment with the new box model properties using your preferred web browser diagnostic tool (such as Firefox's Firebug)</li>
+                        <li>The box below is <code>id="better_box_model"</code>, in the file <code>css3_samples.css</code></li>
+                        <li>Edit the following code in CodePen and apply border-radius, text-shadow and box-shadow effects.</li>
                     </ul>
-                    <form>
-                        <label for="username">Username</label>	
-                        <input type="text" name="username" id="username">
-                        <label for="password">Password</label>	
-                        <input type="text" name="password" id="password">
-                    </form>
+
+                    <div class="demo">
+                        <p data-height="268" data-theme-id="0" data-slug-hash="xZbxVE" data-default-tab="html" data-user="jflores15" class='codepen'>See the Pen <a href='http://codepen.io/jflores15/pen/xZbxVE/'>Week 6 - Exercise 1</a> by Joanna Flores (<a href='http://codepen.io/jflores15'>@jflores15</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+                    </div>
                 </section>
-                
-                <section>
-                    <h3>Challenges A &amp; B:</h3>
-                    <p><a href="http://bcitcomp.ca/comp1950/downloads/transitions_exercise_solution.zip">Download a sample solution</a></p> 
+            </div>
+            
+            <!-- Exercise #2 - CSS3 Transitions Exercise -->
+            <div>
+                <div class="scroller exercisessubpage" data-section-name="wk06ex02a">
+                    <h2>Exercise 2: CSS3 Transitions Exercise</h2>
+                    <section>
+                        <h3>Challenge A:</h3>
+                        <p><a href="http://bcitcomp.ca/comp1950/downloads/transitions_exercise.zip">Download the transitions exercise starting files.</a></p>
+                        <p>The yellow button image in this exercise is absolutely positioned so that it overlaps a green button image beneath it. Use the notes included in CodePen as guide on the transition and hover effects needed to be applied for this element.</p>
+                        <p>
+                            Remember to follow the pattern:<br />
+                            <code>-vendorprefix-transition:property duration timing-function;</code>
+                        </p>
+                        <p>Demonstrate the finished transition to your instructor</p>
+                        <div class="demo">
+                            <p data-height="250" data-theme-id="0" data-slug-hash="YwPzGE" data-default-tab="html" data-user="jflores15" class='codepen'>See the Pen <a href='http://codepen.io/jflores15/pen/YwPzGE/'>Week 6 - Exercise 2a</a> by Joanna Flores (<a href='http://codepen.io/jflores15'>@jflores15</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+    <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+                        </div>
+                    </section>
+                </div>
+
+                <section class="scroller exercisessubpage" data-section-name="wk06ex02b">
+                    <h3>Challenge B:</h3>
+                    <p><a href="http://bcitcomp.ca/comp1950/downloads/transitions_exercise.zip">Download the transitions exercise starting files.</a></p>
+                    <p>Add the transition code that will alter the width or the height of the form inputs when they are in the 	<code>focus</code> state. Use the notes included in CodePen as guide on the transition effects needed to be applied for these elements.</p>
+                    <p>Demonstrate the finished transition to your instructor</p>
+                    <div class="demo">
+                        <p data-height="275" data-theme-id="0" data-slug-hash="BjyaWG" data-default-tab="html" data-user="jflores15" class='codepen'>See the Pen <a href='http://codepen.io/jflores15/pen/BjyaWG/'>Week 6 - Exercise 2b</a> by Joanna Flores (<a href='http://codepen.io/jflores15'>@jflores15</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+                    </div>
+                    <br />
+                    <section>
+                        <h3>Challenges A &amp; B:</h3>
+                        <p><a href="http://bcitcomp.ca/comp1950/downloads/transitions_exercise_solution.zip">Download a sample solution</a></p> 
+                    </section>
                 </section>
-            </section>
+            </div>
             
             <!-- Exercise #3 - Animations and Keyframes -->
-            <section class="exercisessubpage">
-                <h2>Exercise 03: Animations and Keyframes</h2>
+            <section class="scroller exercisessubpage" data-section-name="wk06ex03">
+                <h2>Exercise 3: Animations and Keyframes</h2>
                 <ul>
                     <li>Download and examine these <a href="http://bcitcomp.ca/comp1950/downloads/animation_keyframes_exercise.zip">example animations</a></li>
-                    <li>Try adding or changing some of the properties being animated</li>
+                    <li>Try adding or changing some of the properties being animated in CodePen</li>
                     <li>Create a new animation to change the width and height of one of the images used on these pages</li>	
                     <li>Download  a <a href="http://bcitcomp.ca/comp1950/downloads/animation_keyframes_solution.zip">sample solution</a></li>
                 </ul>
+                <div class="demo">
+                    <p data-height="350" data-theme-id="0" data-slug-hash="ZQYEJb" data-default-tab="html" data-user="jflores15" class='codepen'>See the Pen <a href='http://codepen.io/jflores15/pen/ZQYEJb/'>Week 6 - Exercise 3</a> by Joanna Flores (<a href='http://codepen.io/jflores15'>@jflores15</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+                </div>
             </section>
             
             <!-- Exercise #4 - Multiple Backgrounds -->
-            <section class="exercisessubpage">
-                <h2>Exercise 04: Multiple Backgrounds</h2>
+            <section class="scroller exercisessubpage" data-section-name="wk06ex04">
+                <h2>Exercise 4: Multiple Backgrounds</h2>
                 <p>Experiment with multiple backgrounds, gradients, and hover effects in this CSS3 background demo and exercise.</p>
                 <ul>
                     <li><a href="http://bcitcomp.ca/comp1950/downloads/multiple_background_exercise.zip">Download the source files</a></li>
@@ -174,19 +215,23 @@ Authors:
                     <li>Try applying a <code>transition</code> effect on the <code>:hover</code>. How does the browser handle this?</li>
                      <li><a href="http://bcitcomp.ca/comp1950/downloads/multiple_background_exercise_solution.zip">Download a sample solution</a></li> 
                 </ul>
+                <div class="demo">
+                    <p data-height="280" data-theme-id="0" data-slug-hash="ZQYEvQ" data-default-tab="css" data-user="jflores15" class='codepen'>See the Pen <a href='http://codepen.io/jflores15/pen/ZQYEvQ/'>Week 6 - Exercise 4</a> by Joanna Flores (<a href='http://codepen.io/jflores15'>@jflores15</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+                </div>
             </section>
 
         </main>
 
         <!--
-        --------------------------------
+        ************************************
         Footer
-        --------------------------------
+        ************************************
         -->
         <footer>
         </footer>
         
     </div>    
-    
+    </div>
 </body>
 </html>
